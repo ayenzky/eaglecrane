@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import get from 'lodash/get'
-
 import Header from '../components/header'
 import Footer from '../components/footer'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'react-id-swiper/src/styles/css/swiper.css'
 import './index.css'
+import './menu.css'
 
 const Layout = ({ head, children }) => (
   <StaticQuery
@@ -21,11 +23,12 @@ const Layout = ({ head, children }) => (
         get(head, 'meta.keywords') ||
         get(data, 'site.siteMetadata.meta.keywords')
       console.log(get(head, 'meta.noIndex'))
-      const siteNoIndex = get(head, 'meta.noIndex')? 
-              {
-                name: 'robots',
-                content: "noindex",
-              } : {}
+      const siteNoIndex = get(head, 'meta.noIndex')
+        ? {
+            name: 'robots',
+            content: 'noindex',
+          }
+        : {}
 
       return (
         <>
@@ -40,22 +43,13 @@ const Layout = ({ head, children }) => (
                 name: 'keywords',
                 content: siteMetaKeywords,
               },
-              siteNoIndex
+              siteNoIndex,
             ]}
           >
             <html lang="en" />
           </Helmet>
           <Header siteTitle={siteName} />
-          <div
-            style={{
-              margin: '0 auto',
-              maxWidth: 960,
-              padding: '0px 1.0875rem 1.45rem',
-              paddingTop: 0,
-            }}
-          >
-            {children}
-          </div>
+          <div>{children}</div>
           <Footer />
         </>
       )

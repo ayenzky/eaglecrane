@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL || 'http://localhost:1337',
+        apiURL: process.env.API_URL || 'https://blog-starter-app.webriq.me',
         contentTypes: process.env.API_BLOG_CONTENT_TYPES || [
           `users`,
           `posts`,
@@ -63,8 +63,8 @@ module.exports = {
           `profiles`,
         ],
         loginData: {
-          identifier: process.env.API_USER_EMAIL || 'galangdj@gmail.com',
-          password: process.env.API_USER_PASSWORD || 'test123',
+          identifier: process.env.API_USER_EMAIL || 'wadmin',
+          password: process.env.API_USER_PASSWORD || 'JAGpM3KbNY3FQxc',
         },
       },
     },
