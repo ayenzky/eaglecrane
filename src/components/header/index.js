@@ -20,12 +20,6 @@ const Header = ({ siteTitle }) => (
 						</div>
 					</div>
 					<div class="col-2 col-md-6 d-flex justify-content-end align-items-center ml-auto">
-						<Link
-							to="/"
-							class="d-none align-items-center join-us text-uppercase"
-						>
-							Join Us
-						</Link>
 						<div class="nav_content">
 							<h2 class="float-right nav_handle mb-0">
 								{' '}
