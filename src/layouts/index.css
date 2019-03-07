@@ -140,9 +140,10 @@ a:hover {
   min-height: 100vh;
   min-width: 177.77vh;
   position: absolute;
-  top: 81%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 90px;
 }
 
 .hero-content {
@@ -294,8 +295,6 @@ footer a {
 }
 
 .footer-info li {
-  display: flex;
-  align-items: start;
   margin-bottom: 0.5rem;
 }
 
