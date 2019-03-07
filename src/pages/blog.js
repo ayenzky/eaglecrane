@@ -1,14 +1,13 @@
 import React from 'react'
 import Layout from '../layouts'
 import { Link, graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
 
 export default function Index({ data }) {
 	const { edges: posts } = data.allMarkdownRemark
 	return (
 		<Layout>
-			<div className="container">
-				<div className="blog-posts">
+			<div className="container pt-5 mt-5">
+				<div className="blog-posts my-5">
 					{posts
 						.filter(post => post.node.frontmatter.title.length > 0)
 						.map(({ node: post }) => {
