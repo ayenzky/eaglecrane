@@ -19,11 +19,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    name: 'Site Name',
-    title: 'Default Title',
+    name: 'Eagle & Crane Coffee Co.',
+    title: 'Eagle & Crane Coffee Co.',
     meta: {
-      keywords: 'Default meta keywords',
-      description: 'Default meta description',
+      keywords: 'Eagle, Crane, Coffee, Free',
+      description: 'Eagle & Crane Coffee Co. – Eagle & Crane Coffee Co.',
     },
   },
   plugins: [
