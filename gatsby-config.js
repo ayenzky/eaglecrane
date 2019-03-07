@@ -19,11 +19,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    name: 'Site Name',
-    title: 'Default Title',
+    name: 'Eagle & Crane Coffee Co.',
+    title: 'Eagle & Crane Coffee Co.',
     meta: {
-      keywords: 'Default meta keywords',
-      description: 'Default meta description',
+      keywords: 'Coffee, Eagle, Crane, Free',
+      description: 'Eagle & Crane Coffee Co. – Eagle & Crane Coffee Co.',
     },
   },
   plugins: [
@@ -33,6 +33,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog`,
       },
     },
     'gatsby-transformer-sharp',
@@ -47,6 +54,21 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
       },
     },
   ],
