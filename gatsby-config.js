@@ -49,27 +49,5 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    // Strapi Blog Posts
-    // To learn more, visit: https://www.gatsbyjs.org/packages/gatsby-source-strapi
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: process.env.API_URL || 'https://blog-starter-app.webriq.me',
-        contentTypes: process.env.API_BLOG_CONTENT_TYPES || [
-          `users`,
-          `posts`,
-          `categories`,
-          `tags`,
-          `profiles`,
-        ],
-        loginData: {
-          identifier: process.env.API_USER_EMAIL || 'wadmin',
-          password: process.env.API_USER_PASSWORD || 'JAGpM3KbNY3FQxc',
-        },
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }
