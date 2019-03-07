@@ -1,6 +1,7 @@
 .menu-container {
-  padding: 3rem 0;
+  padding: 1rem 0;
   transition: 400ms ease-in-out;
+  background: #111111;
 }
 
 .is-sticky .menu-container {
@@ -28,7 +29,13 @@
   margin-bottom: 10px;
 }
 
-.fs-navigation-overlay-nav.fs-navigation-enabled .main-nav li a {
+.sidebar {
+  width: 300px;
+  position: fixed !important;
+  z-index: 9999 !important;
+}
+
+.sidebar .main-nav li a {
   display: block;
   font-size: 18px;
   padding: 10px 0;
