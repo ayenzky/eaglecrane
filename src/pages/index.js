@@ -13,8 +13,8 @@ import NewsBg from '../images/newsletterbg.jpg'
 
 const IndexPage = () => (
   <Layout head={{ title: 'Home' }}>
-    <div class="hero">
-      <div class="video-background">
+    <div className="hero">
+      <div className="video-background">
         <iframe
           title="About Eagle & Crane Coffee Co. from Eagle & Crane Coffee Co. on Vimeo"
           src="https://player.vimeo.com/video/295221419?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
@@ -24,27 +24,27 @@ const IndexPage = () => (
           allowfullscreen
         />
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 pr-md-5">
-            <div class="hero-content">
-              <h1 class="hero-title text-white">Like Free Coffe?</h1>
-              <h4 class="hero-subtitle text-white">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8 pr-md-5">
+            <div className="hero-content">
+              <h1 className="hero-title text-white">Like Free Coffe?</h1>
+              <h4 className="hero-subtitle text-white">
                 Join the Coffee Club and start with a free bag! Just pay $5 for
                 shipping.
               </h4>
-              <div class="d-flex justify-content-start mt-4">
-                <Link to="#subscribe" class="alink hvr-shadow mr-3">
+              <div className="d-flex justify-content-start mt-4">
+                <Link to="#subscribe" className="alink hvr-shadow mr-3">
                   Subscribe
                 </Link>
                 <button
-                  class="btn btn-primary playlink"
+                  className="btn btn-primary playlink"
                   type="button"
                   id="play-button"
                   data-toggle="modal"
                   data-target="#video"
                 >
-                  <img src={Arrow} width="30" class="mb-0" alt="Arrow" />
+                  <img src={Arrow} width="30" className="mb-0" alt="Arrow" />
                 </button>
               </div>
             </div>
@@ -53,22 +53,27 @@ const IndexPage = () => (
       </div>
     </div>
     <main>
-      <section id="how-it-works" class="component">
-        <div class="container">
-          <div class="intro text-center mb-5">
+      <section id="how-it-works" className="component">
+        <div className="container">
+          <div className="intro text-center mb-5">
             <img
               src={Eagle}
-              class="mb-0"
+              className="mb-0"
               style={{ width: '100px' }}
               alt="Eagle"
             />
             <h5>How It Works?</h5>
             <h3>Eagle & Crane Coffee</h3>
           </div>
-          <div class="row pt-4">
-            <div class="col-md-4 text-center">
-              <div class="content">
-                <img src={CoffeePot} width="80" class="mb-3" alt="CoffeePot" />
+          <div className="row pt-4">
+            <div className="col-md-4 text-center">
+              <div className="content">
+                <img
+                  src={CoffeePot}
+                  width="80"
+                  className="mb-3"
+                  alt="CoffeePot"
+                />
                 <h5>
                   Choose Your Coffee
                   <br />
@@ -76,9 +81,14 @@ const IndexPage = () => (
                 </h5>
               </div>
             </div>
-            <div class="col-md-4 text-center">
-              <div class="content">
-                <img src={CoffeeBag} width="80" class="mb-3" alt="CoffeeBag" />
+            <div className="col-md-4 text-center">
+              <div className="content">
+                <img
+                  src={CoffeeBag}
+                  width="80"
+                  className="mb-3"
+                  alt="CoffeeBag"
+                />
                 <h5>
                   Choose Your Coffee
                   <br />
@@ -86,12 +96,12 @@ const IndexPage = () => (
                 </h5>
               </div>
             </div>
-            <div class="col-md-4 text-center">
-              <div class="content">
+            <div className="col-md-4 text-center">
+              <div className="content">
                 <img
                   src={CoffeePack}
                   width="80"
-                  class="mb-3"
+                  className="mb-3"
                   alt="CoffeePack"
                 />
                 <h5>
@@ -104,9 +114,9 @@ const IndexPage = () => (
           </div>
         </div>
       </section>
-      <section id="subscribe" class="component bg-dirty-white py-0">
-        <div class="container-fluid">
-          <div class="intro text-center mb-5 d-none">
+      <section id="subscribe" className="component bg-dirty-white py-0">
+        <div className="container-fluid">
+          <div className="intro text-center mb-5 d-none">
             <h3>Coffee Club Package</h3>
             <p>
               Premium, small batch coffee. Shipped fresh on Thursdays. Set the
@@ -114,22 +124,22 @@ const IndexPage = () => (
               memberships receive free shipping.&nbsp;
             </p>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-md-6 p-0">
-              <div class="card package">
-                <div class="card-body text-center p-5">
-                  <h4 class="package-title">Free TRIal</h4>
-                  <h2 class="text-orange package-price my-4">
+          <div className="row justify-content-center">
+            <div className="col-md-6 p-0">
+              <div className="card package">
+                <div className="card-body text-center p-5">
+                  <h4 className="package-title">Free TRIal</h4>
+                  <h2 className="text-orange package-price my-4">
                     <span>$</span>0<strong>/month</strong>
                   </h2>
-                  <p class="mb-0">
+                  <p className="mb-0">
                     One 12oz bag of coffee and pay only $5 for shipping &amp;
                     handling cost.
                   </p>
-                  <div class="d-flex justify-content-center mt-4">
+                  <div className="d-flex justify-content-center mt-4">
                     <Link
                       to="#"
-                      class="subscribe hvr-shadow bg-orange text-white"
+                      className="subscribe hvr-shadow bg-orange text-white"
                     >
                       Subscribe
                     </Link>
@@ -137,20 +147,20 @@ const IndexPage = () => (
                 </div>
               </div>
             </div>
-            <div class="col-md-6 p-0">
-              <div class="card bg-orange text-white package">
-                <div class="card-body text-center p-5">
-                  <h4 class="package-title">Recommended</h4>
-                  <h2 class="text-white package-price my-4">
+            <div className="col-md-6 p-0">
+              <div className="card bg-orange text-white package">
+                <div className="card-body text-center p-5">
+                  <h4 className="package-title">Recommended</h4>
+                  <h2 className="text-white package-price my-4">
                     <span>$</span>34.99<strong>/month</strong>
                   </h2>
-                  <p class="mb-0">
+                  <p className="mb-0">
                     Two 12oz bags of coffee shipped once a month, Standard Grind
                     and Medium Roast Profile&nbsp;
                     <br />
                   </p>
-                  <div class="d-flex justify-content-center mt-4">
-                    <Link to="#" class="subscribe hvr-shadow bg-white">
+                  <div className="d-flex justify-content-center mt-4">
+                    <Link to="#" className="subscribe hvr-shadow bg-white">
                       Subscribe
                     </Link>
                   </div>
@@ -162,31 +172,31 @@ const IndexPage = () => (
       </section>
       <section
         id="customer-reviews"
-        class="component bg-cover"
+        className="component bg-cover"
         style={{ backgroundImage: `url("${ReviewBG}")` }}
       >
-        <div class="container">
-          <div class="intro text-center mb-5">
-            <h5 class="text-white">Customer Review</h5>
-            <h3 class="text-white">What Our Customer Say</h3>
+        <div className="container">
+          <div className="intro text-center mb-5">
+            <h5 className="text-white">Customer Review</h5>
+            <h3 className="text-white">What Our Customer Say</h3>
           </div>
           <ReviewSlider />
-          <div class="d-flex justify-content-center mt-4">
-            <a href="#subscribe" class="alink hvr-shadow">
+          <div className="d-flex justify-content-center mt-4">
+            <a href="#subscribe" className="alink hvr-shadow">
               Subscribe
             </a>
           </div>
         </div>
       </section>
-      <section id="blog" class="component">
-        <div class="container">
-          <div class="intro text-center mb-5">
+      <section id="blog" className="component">
+        <div className="container">
+          <div className="intro text-center mb-5">
             <h3>Blog</h3>
           </div>
-          <div class="row">
-            <div class="col-md-5 mx-auto">
-              <div class="text-center blog-list">
-                <div class="blog-list-title mb-3">
+          <div className="row">
+            <div className="col-md-5 mx-auto">
+              <div className="text-center blog-list">
+                <div className="blog-list-title mb-3">
                   <h4>
                     <a href="how-to-start-a-coffee-company-part-one.html">
                       How to Start a Coffee Company, Part One
@@ -194,7 +204,7 @@ const IndexPage = () => (
                   </h4>
                   <small>SEP. 17, 2018 - MACKYNZIE SCHUTZ</small>
                 </div>
-                <div class="blog-list-content">
+                <div className="blog-list-content">
                   <p>
                     Oh boy. I’ve been delaying this trip recap for a very long
                     time because so much happened and I’m not really sure how to
@@ -203,7 +213,7 @@ const IndexPage = () => (
                   </p>
                   <a
                     href="/how-to-start-a-coffee-company-part-one"
-                    class="text-orange"
+                    className="text-orange"
                   >
                     Read More
                   </a>
@@ -215,16 +225,16 @@ const IndexPage = () => (
       </section>
       <section
         id="newsletter"
-        class="component bg-cover"
+        className="component bg-cover"
         style={{ background: `url("${NewsBg}")` }}
       >
-        <div class="container">
-          <div class="intro text-center mb-5">
-            <h5 class="text-white">Newsletter Subscription</h5>
-            <h3 class="text-white">Keep Me Updated</h3>
+        <div className="container">
+          <div className="intro text-center mb-5">
+            <h5 className="text-white">Newsletter Subscription</h5>
+            <h3 className="text-white">Keep Me Updated</h3>
           </div>
-          <div class="row">
-            <div class="col-md-6 mx-auto">
+          <div className="row">
+            <div className="col-md-6 mx-auto">
               <div id="es-subcribe">
                 <Subscribe />
               </div>
@@ -237,5 +247,3 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
-

@@ -30,11 +30,11 @@ class Header extends React.Component {
 				pullRight={true}
 				sidebar={
 					<div
-						class="float-right navigation"
+						className="float-right navigation"
 						data-navigation-handle=".nav_handle"
 						data-navigation-content=".nav_content"
 					>
-						<ul class="list-unstyled main-nav mb-0 d-block">
+						<ul className="list-unstyled main-nav mb-0 d-block">
 							<li>
 								{' '}
 								<Link to="/">Home </Link>
@@ -59,17 +59,17 @@ class Header extends React.Component {
 								<Link to="/">Contact Us </Link>
 							</li>
 						</ul>
-						<ul class="list-unstyled footer-info mt-4">
+						<ul className="list-unstyled footer-info mt-4">
 							<li>
-								<img src={Coffee} width="22" class="mr-2" alt="Coffee" />
+								<img src={Coffee} width="22" className="mr-2" alt="Coffee" />
 								<span>Eagle &amp; Crane Coffee Co</span>
 							</li>
 							<li>
-								<img src={Pin} width="21" class="mr-2" alt="pin" />
+								<img src={Pin} width="21" className="mr-2" alt="pin" />
 								<span>3126 Temple Gap Rd.,&nbsp;Colorado Springs, CO</span>
 							</li>
 							<li>
-								<img src={Tel} width="21" class="mr-2" alt="Telephone" />
+								<img src={Tel} width="21" className="mr-2" alt="Telephone" />
 								<a
 									href="tel:615-900-6871"
 									target="_blank"
@@ -79,7 +79,7 @@ class Header extends React.Component {
 								</a>
 							</li>
 							<li>
-								<img src={Mail} width="21" class="mr-2" alt="mail" />
+								<img src={Mail} width="21" className="mr-2" alt="mail" />
 								<a
 									href="mailto:mack@eagleandcrane.com"
 									target="_blank"
@@ -103,24 +103,24 @@ class Header extends React.Component {
 				styles={{ sidebar: { background: 'white' } }}
 			>
 				<header>
-					<div class="menu-container">
-						<div class="container">
-							<div class="row d-flex align-items-center">
-								<div class="col-9 col-md-5">
-									<div class="nav-brand">
-										<h4 class="m-0 text-white logo-text">
+					<div className="menu-container">
+						<div className="container">
+							<div className="row d-flex align-items-center">
+								<div className="col-9 col-md-5">
+									<div className="nav-brand">
+										<h4 className="m-0 text-white logo-text">
 											<Link to="/">Eagle &amp; Crane Coffee Co.</Link>
 										</h4>
 									</div>
 								</div>
-								<div class="col-2 col-md-6 d-flex justify-content-end align-items-center ml-auto">
+								<div className="col-2 col-md-6 d-flex justify-content-end align-items-center ml-auto">
 									<Link
 										href="/"
-										class="align-items-center join-us text-uppercase"
+										className="align-items-center join-us text-uppercase"
 									>
 										Join Us
 									</Link>
-									<div class="nav_content">
+									<div className="nav_content">
 										<button onClick={() => this.onSetSidebarOpen(true)}>
 											{' '}
 											<img src={Bars} alt="bars" />

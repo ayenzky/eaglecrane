@@ -13,26 +13,26 @@ class Subscribe extends React.Component {
 	render() {
 		return (
 			<form
-				class="form-newsletter"
+				className="form-newsletter"
 				action="/thank-you"
 				method="post"
 				data-form-id="5c7f97278ba9a30a93a2a085"
 				webriq="true"
 			>
-				<div class="form-row d-flex justify-content-center">
-					<div class="col-md-8 p-0">
-						<div class="form-group">
+				<div className="form-row d-flex justify-content-center">
+					<div className="col-md-8 p-0">
+						<div className="form-group">
 							<input
-								class="form-control"
+								className="form-control"
 								type="email"
 								name="Email"
 								placeholder="Enter Your Email Address"
 							/>
 						</div>
 					</div>
-					<div class="col-md-4 p-0">
-						<div class="form-group">
-							<button class="btn btn-primary hvr-shadow" type="submit">
+					<div className="col-md-4 p-0">
+						<div className="form-group">
+							<button className="btn btn-primary hvr-shadow" type="submit">
 								Submit
 							</button>
 						</div>
