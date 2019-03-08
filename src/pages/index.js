@@ -211,12 +211,12 @@ const IndexPage = () => (
                     cohesively communicate all of it to...
                     <br />
                   </p>
-                  <a
-                    href="/how-to-start-a-coffee-company-part-one"
+                  <Link
+                    to="/how-to-start-a-coffee-company-part-one"
                     className="text-orange"
                   >
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
