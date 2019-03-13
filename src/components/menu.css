@@ -1,0 +1,41 @@
+.sticky-wrapper {
+  transform: unset !important;
+}
+.menu-container {
+  padding: 1rem 0;
+  transition: 400ms ease-in-out;
+  background-color: #ffffff;
+}
+.is-sticky .menu-container {
+  padding: 0.5rem 0;
+  z-index: 1 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
+  padding: 3rem 2.5rem 2rem 2.5rem;
+}
+.navigation .main-nav li {
+  margin-bottom: 0;
+}
+.navigation .main-nav li a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #000000;
+  padding: 5px;
+}
+
+.navigation .nav-brand-side {
+  display: none;
+  padding: 25px;
+  margin-bottom: 10px;
+}
+
+.navigation .main-nav li a {
+  display: block;
+  font-size: 18px;
+  padding: 10px 0;
+}
+

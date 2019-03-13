@@ -1,0 +1,114 @@
+.package-title {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.package-price span {
+  font-size: 22px;
+  position: relative;
+  top: -15px;
+}
+
+.package-price strong {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: -5px;
+  font-family: 'Roboto',sans-serif;
+}
+
+.package .card-body p {
+  font-size: 1.5rem;
+}
+
+.subscribe {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0px;
+  color: #3c2f2f;
+  letter-spacing: 2px;
+  display: flex !important;
+  align-items: center;
+}
+
+#customer-reviews {
+  padding: 100px 0;
+  background-image: url(../../static/img/reviewbg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+  background: url(../../static/img/002-next.svg) no-repeat center center;
+  background-size: cover;
+  outline: none;
+}
+
+.swiper-button-prev {
+  background: url(../../static/img/001-back.svg) no-repeat center center;
+  background-size: cover;
+  outline: none;
+}
+
+
+.review-body {
+  padding: 0 2rem;
+}
+
+.review-body h5 {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.45;
+  color: #fff;
+}
+
+.review-author li {
+  margin: 0.2rem;
+}
+
+.blog-list-title a {
+  color: #3c2f2f;
+}
+
+#newsletter {
+  padding: 150px 0;
+  background-image: url(../../static/img/newsletterbg.jpg);
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.form-newsletter input {
+  border-radius: 0;
+  height: 60px;
+  box-shadow: none !important;
+  outline: none;
+  border: none;
+}
+
+.form-newsletter button {
+  border-radius: 0;
+  height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff !important;
+  background-color: #eb4f47 !important;
+  border-radius: 0px;
+  letter-spacing: 2px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+@media (min-width:768px) {
+  .review-body {
+    padding: 0 5rem;
+  }
+}
+
+@media (min-width:1200px) {
+  .package {
+    padding: 5rem;
+  }
+}
