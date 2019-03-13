@@ -166,6 +166,35 @@ by paying sustainable wages for them to support their families.</h5>
                                 <a href="how-to-start-a-coffee-company-part-one.html" className="text-orange">Read More</a></div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="newsletter" className="component">
+            <div className="container">
+                <div className="intro text-center mb-5">
+                    <h5 className="text-white">Keep Me Updated</h5>
+                    <h2 className="text-white text-uppercase">Newsletter Subscription</h2>
+                </div>
+                <div className="row">
+                    <div className="col-md-6 mx-auto">
+                        <div id="es-subcribe">
+                            <form className="form-newsletter">
+                                <div className="form-row d-flex justify-content-center">
+                                    <div className="col-md-8 p-0">
+                                        <div className="form-group">
+                                          <input className="form-control" type="email" name="inputEmail" placeholder="Enter Your Email Address"/>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4 p-0">
+                                        <div className="form-group"><button className="btn btn-primary hvr-shadow" type="submit">Submit</button></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
       </Layout>
     )
   }
