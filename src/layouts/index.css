@@ -213,7 +213,7 @@ main {
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 0px;
-  color: #3c2f2f;
+  color: #3c2f2f !important;
   letter-spacing: 2px;
   display: flex !important;
   align-items: center;
@@ -221,7 +221,7 @@ main {
 }
 
 .subscribe:hover {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .modal-body {
