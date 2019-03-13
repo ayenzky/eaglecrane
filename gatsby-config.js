@@ -1,59 +1,87 @@
-// Load environment variables
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
-/**
- * To set environment variables, create .env.development
- *
- * E.g:
- *
- * API_URL=https://example.com/api
- *
- * Then:
- *
- * process.env.API_URL=https://example.com/api
- *
- * See .env.example as an example
- */
-
 module.exports = {
   siteMetadata: {
-    name: 'Eagle & Crane Coffee Co.',
-    title: 'Eagle & Crane Coffee Co.',
-    meta: {
-      keywords: 'Eagle, Crane, Coffee, Free',
-      description: 'Eagle & Crane Coffee Co. – Eagle & Crane Coffee Co.',
+    title: `Eagle & Crane Coffee Co.`,
+    author: `Kyle Mathews`,
+    description: `Eagle & Crane Coffee Co. – Eagle & Crane Coffee Co.`,
+    siteUrl: `https://eagleandcrane.com/`,
+    social: {
+      twitter: `kylemathews`,
     },
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    // Source all blog posts
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/posts`,
+        name: `posts`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/blog`,
+        path: `${__dirname}/assets/img`,
+        name: `image_assets`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Frank Ruhl Libre\:300,400,500,700`,
+          `Josefin Sans\:00,600,700`, // you can also specify font weights and styles
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        name: `Eagle & Crane Coffee Co.`,
+        short_name: `Eagle & Crane`,
+        start_url: `/`,
+        background_color: `#000000`,
+        theme_color: `#ffffff`,
+        display: `minimal-ui`,
+        icon: `static/img/eagle.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
   ],
