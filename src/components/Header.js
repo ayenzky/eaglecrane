@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Image } from 'react-bootstrap'
-import Menu from './menu'
+import Menu from './Menu'
 
 const Header = () => (
   <div className="menu-container">

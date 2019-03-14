@@ -1,5 +1,7 @@
 import React  from 'react'
 import { Link } from 'gatsby'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default () => (
   <footer className="bg-white pt-4">
@@ -12,7 +14,7 @@ export default () => (
                 </div>
                 <div className="col-md-2">
                     <h4 className="mb-4">Menu</h4>
-                    <ul className="list-unstyled">
+                    <ul className="list-unstyled ml-0">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/">Coffee Club</Link></li>
                         <li><Link to="/">About</Link></li>
@@ -23,14 +25,18 @@ export default () => (
                 </div>
                 <div className="col-md-4">
                     <h4 className="mb-4">Company</h4>
-                    <ul className="list-unstyled footer-info">
-                        <li><img src="/img/001-coffee-cup.svg" width="20" className="mr-2 mb-0" alt="business" /><span>Eagle &amp; Crane Coffee Co</span></li>
-                        <li><img src="/img/002-pin.svg" width="20" className="mr-2 mb-0" alt="location" /><span>2727 N Cascade Ave #155, Colorado Springs, CO 80907</span></li>
-                        <li><img src="/img/003-telephone.svg" width="20" className="mr-2 mb-0" alt="phone" /><a href="tel://6159006871">615-900-6871</a></li>
-                        <li><img src="/img/004-mail.svg" width="20" className="mr-2 mb-0" alt="email" /><a href="mailto:info@eagleandcrane.com">info@eagleandcrane.com</a></li>
-                    </ul><a href="/"><img src="/img/002-facebook.svg" width="40" alt="facebook" /></a></div>
+                    <ul className="list-unstyled ml-0 footer-info">
+                        <li><LazyLoadImage effect="blur" src="/img/001-coffee-cup.svg" width="20" className="mr-2 mb-0" alt="business" /><span>Eagle &amp; Crane Coffee Co</span></li>
+                        <li><LazyLoadImage effect="blur" src="/img/002-pin.svg" width="20" className="mr-2 mb-0" alt="location" /><span>2727 N Cascade Ave #155, Colorado Springs, CO 80907</span></li>
+                        <li><LazyLoadImage effect="blur" src="/img/003-telephone.svg" width="20" className="mr-2 mb-0" alt="phone" /><a href="tel://6159006871">615-900-6871</a></li>
+                        <li><LazyLoadImage effect="blur" src="/img/004-mail.svg" width="20" className="mr-2 mb-0" alt="email" /><a href="mailto:info@eagleandcrane.com">info@eagleandcrane.com</a></li>
+                    </ul>
+                    <a href="https://www.facebook.com/eagleandcrane" target="_blank" rel="noopener noreferrer"><LazyLoadImage effect="blur" className="mb-0 mr-2" src="/img/002-facebook.svg" width="40" alt="facebook" /></a>
+                    <a href="https://www.instagram.com/eaglecranecoffee/" target="_blank" rel="noopener noreferrer"><LazyLoadImage effect="blur" className="mb-0 mr-2" src="/img/001-instagram.svg" width="40" alt="instagram" /></a>
+                    <a href="https://vimeo.com/user25548849" target="_blank" rel="noopener noreferrer"><LazyLoadImage effect="blur" className="mb-0 mr-2" src="/img/002-vimeo.svg" width="40" alt="instagram" /></a>
+                </div>
             </div>
-            <p id="copywrite" className="mb-0">© Copyright {new Date().getFullYear()} - Eagle &amp; Crane Coffee Co. - All Rights Reserved - Designed by <a href="https://www.webriq.services/">WebriQ Goes Mad</a> - Powered by <a href="https://www.webriq.com/">WebriQ</a></p>
+            <p id="copywrite" className="mb-0">© Copyright {new Date().getFullYear()} - Eagle &amp; Crane Coffee Co. - All Rights Reserved - Designed by <a href="https://www.webriq.services/" target="_blank" rel="noopener noreferrer">WebriQ Goes Mad</a> - Powered by <a href="https://www.webriq.com/" target="_blank" rel="noopener noreferrer">WebriQ</a></p>
         </div>
     </footer>
 

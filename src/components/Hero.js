@@ -33,7 +33,7 @@ class Hero extends React.Component {
                                 buttonclass='btn btn-primary playlink'
                                 >
                                 <div style={{padding:`56.25% 0 0 0`, position:`relative`}}>
-                                    <iframe title="eagle" id="myvideo" src="https://player.vimeo.com/video/295221419?title=0&byline=0&portrait=0&loop=1" 
+                                    <iframe title="eagle" id="myvideo" src="https://player.vimeo.com/video/295221419?autoplay=1&title=0&byline=0&portrait=0&loop=1" 
                                         style={{
                                             position:`absolute`,
                                             top:0,

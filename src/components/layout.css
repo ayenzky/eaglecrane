@@ -41,6 +41,7 @@ header {
   z-index: 1;
 }
 a {
+  color: #000;
   box-shadow: none;
 }
 a:hover {
@@ -103,6 +104,9 @@ a:hover {
   letter-spacing: 2px;
 }
 
+.the-social div[role="button"] {
+  outline: none;
+}
 
 main {
   background-color: #ffffff;
@@ -120,6 +124,7 @@ main {
 
 footer {
   position: relative;
+  border-top: 1px solid #e9ecef;
 }
 
 footer ul li {
