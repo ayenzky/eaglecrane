@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-import { graphql } from 'gatsby'
-=======
-import {  Link, graphql } from 'gatsby'
->>>>>>> 2f0a4cf489fc83911eb2923300f87d9a89374fd3
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Button, Modal } from 'react-bootstrap'
 import Iframe from 'react-iframe'
@@ -41,14 +37,11 @@ class IndexPage extends React.Component {
     const { data } = this.props
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = this.props.data.site.siteMetadata.description
-<<<<<<< HEAD
     const freeTrialShow = () => this.setState({ freeTrialShow: true })
     const recommendedShow = () => this.setState({ recommendedShow: true })
     const freeTrialClose = () => this.setState({ freeTrialShow: false })
     const recommendedClose = () => this.setState({ recommendedShow: false })
-=======
     const posts = data.allMarkdownRemark.edges
->>>>>>> 2f0a4cf489fc83911eb2923300f87d9a89374fd3
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -376,69 +369,47 @@ class IndexPage extends React.Component {
           </div>
         </section>
         <section id="blog" className="component">
-<<<<<<< HEAD
           <div className="container">
             <div className="intro text-center mb-5">
               <h2 className="text-uppercase">Blog</h2>
             </div>
             <div className="row">
               <div className="col-md-5 mx-auto">
-                <div className="text-center blog-list">
-                  <div className="blog-list-title mb-3">
-                    <h4>
-                      <a href="/">How to Start a Coffee Company, Part One</a>
-                    </h4>
-                    <small>SEP. 17, 2018 - MACKYNZIE SCHUTZ</small>
-                  </div>
-                  <div className="blog-list-content">
-                    <p>
-                      Oh boy. I’ve been delaying this trip recap for a very long
-                      time because so much happened and I’m not really sure how
-                      to cohesively communicate all of it to...
-                    </p>
-                    <a
-                      href="how-to-start-a-coffee-company-part-one.html"
-                      className="text-orange"
-                    >
-                      Read More
-                    </a>
-                  </div>
-=======
-            <div className="container">
-                <div className="intro text-center mb-5">
-                    <h2 className="text-uppercase">Blog</h2>
-                </div>
-                <div className="row">
-                    <div className="col-md-5 mx-auto">
-                        {posts.slice(0,3).map(({ node }) =>{
-                          // const title = node.frontmatter.title || node.fields.slug
-                          return (
-                            <div className="text-center blog-list">
-                            <div className="blog-list-title mb-3">
-                                <h4><Link to={`blog/${node.fields.slug}`}>{node.frontmatter.title}</Link></h4>
-                                <small className="text-uppercase">{node.frontmatter.date} - {node.frontmatter.author}</small></div>
-                            <div className="blog-list-content">
-                                <p>{node.excerpt}</p>
-                                <Link to={`blog/${node.fields.slug}`} className="text-orange">Read More</Link></div>
-                            </div>
-                            )
-                        })}
-                        
+                {posts.slice(0, 3).map(({ node }) => {
+                  // const title = node.frontmatter.title || node.fields.slug
+                  return (
+                    <div className="text-center blog-list">
+                      <div className="blog-list-title mb-3">
+                        <h4>
+                          <Link to={`blog/${node.fields.slug}`}>
+                            {node.frontmatter.title}
+                          </Link>
+                        </h4>
+                        <small className="text-uppercase">
+                          {node.frontmatter.date} - {node.frontmatter.author}
+                        </small>
+                      </div>
+                      <div className="blog-list-content">
+                        <p>{node.excerpt}</p>
+                        <Link
+                          to={`blog/${node.fields.slug}`}
+                          className="text-orange"
+                        >
+                          Read More
+                        </Link>
+                      </div>
                     </div>
->>>>>>> 2f0a4cf489fc83911eb2923300f87d9a89374fd3
-                </div>
+                  )
+                })}
               </div>
             </div>
           </div>
         </section>
         <section id="newsletter" className="component">
-<<<<<<< HEAD
           <div className="container">
             <div className="intro text-center mb-5">
               <h5 className="text-white">Keep Me Updated</h5>
-              <h2 className="text-white text-uppercase">
-                Newsletter Subscription
-              </h2>
+              <h2 className="text-white text-uppercase">Newsletter</h2>
             </div>
             <div className="row">
               <div className="col-md-6 mx-auto">
@@ -453,28 +424,6 @@ class IndexPage extends React.Component {
                             name="inputEmail"
                             placeholder="Enter Your Email Address"
                           />
-=======
-            <div className="container">
-                <div className="intro text-center mb-5">
-                    <h5 className="text-white">Keep Me Updated</h5>
-                    <h2 className="text-white text-uppercase">Newsletter</h2>
-                </div>
-                <div className="row">
-                    <div className="col-md-6 mx-auto">
-                        <div id="es-subcribe">
-                            <form className="form-newsletter">
-                                <div className="form-row d-flex justify-content-center">
-                                    <div className="col-md-8 p-0">
-                                        <div className="form-group">
-                                          <input className="form-control" type="email" name="inputEmail" placeholder="Enter Your Email Address"/>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 p-0">
-                                        <div className="form-group"><button className="btn btn-primary hvr-shadow" type="submit">Submit</button></div>
-                                    </div>
-                                </div>
-                            </form>
->>>>>>> 2f0a4cf489fc83911eb2923300f87d9a89374fd3
                         </div>
                       </div>
                       <div className="col-md-4 p-0">
