@@ -1,5 +1,5 @@
 import React from 'react'
-import {  graphql } from 'gatsby'
+import {  Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -23,8 +23,10 @@ class IndexPage extends React.Component {
     }
   }
   render() {
+    const { data } = this.props
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = this.props.data.site.siteMetadata.description
+    const posts = data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -158,13 +160,20 @@ by paying sustainable wages for them to support their families.</h5>
                 </div>
                 <div className="row">
                     <div className="col-md-5 mx-auto">
-                        <div className="text-center blog-list">
+                        {posts.slice(0,3).map(({ node }) =>{
+                          // const title = node.frontmatter.title || node.fields.slug
+                          return (
+                            <div className="text-center blog-list">
                             <div className="blog-list-title mb-3">
-                                <h4><a href="/">How to Start a Coffee Company, Part One</a></h4><small>SEP. 17, 2018 - MACKYNZIE SCHUTZ</small></div>
+                                <h4><Link to={`blog/${node.fields.slug}`}>{node.frontmatter.title}</Link></h4>
+                                <small className="text-uppercase">{node.frontmatter.date} - {node.frontmatter.author}</small></div>
                             <div className="blog-list-content">
-                                <p>Oh boy. I’ve been delaying this trip recap for a very long time because so much happened and I’m not really sure how to cohesively communicate all of it to...</p>
-                                <a href="how-to-start-a-coffee-company-part-one.html" className="text-orange">Read More</a></div>
-                        </div>
+                                <p>{node.excerpt}</p>
+                                <Link to={`blog/${node.fields.slug}`} className="text-orange">Read More</Link></div>
+                            </div>
+                            )
+                        })}
+                        
                     </div>
                 </div>
             </div>
@@ -173,7 +182,7 @@ by paying sustainable wages for them to support their families.</h5>
             <div className="container">
                 <div className="intro text-center mb-5">
                     <h5 className="text-white">Keep Me Updated</h5>
-                    <h2 className="text-white text-uppercase">Newsletter Subscription</h2>
+                    <h2 className="text-white text-uppercase">Newsletter</h2>
                 </div>
                 <div className="row">
                     <div className="col-md-6 mx-auto">
@@ -209,6 +218,22 @@ export const indexPageQuery = graphql`
         title
         author
         description
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt(pruneLength: 160)
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMM DD, YYYY")
+            title
+            shortdesc
+            author
+          }
+        }
       }
     }
   }
