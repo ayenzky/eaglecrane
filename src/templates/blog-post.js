@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
         <p>{post.frontmatter.date} - {post.frontmatter.author}</p>
         <div className="the-social d-flex mb-4">
         <div className="mr-2">
-          <FacebookShareButton  url={`https://eagleandcrane.com/blogs${post.fields.slug}`} title={siteTitle}>
+          <FacebookShareButton  url={`https://eagleandcrane.com/blogs${post.fields.slug}`} quote={siteTitle}>
             <FacebookIcon size={40} round={true}/>
           </FacebookShareButton>
         </div>

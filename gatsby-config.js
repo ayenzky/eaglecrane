@@ -18,13 +18,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/assets/img`,
-        name: `image_assets`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
