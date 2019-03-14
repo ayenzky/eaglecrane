@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Sticky from 'react-sticky-el'
 import Header from './Header'
 import Hero from './Hero'
@@ -21,23 +20,18 @@ class Layout extends React.Component {
       )
     } else {
       hero = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
+        <div className="hero-main">
+          <div className="hero-bg"/>
+          <div className="container">
+              <div className="row">
+                  <div className="col-md-9 pr-md-5">
+                      <div className="hero-main-content">
+                          <h1 className="text-white">{title}</h1>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
       )
     }
     return (
