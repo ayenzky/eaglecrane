@@ -1,9 +1,15 @@
+#video {
+  background: #000 url(../../static/img/videobg.jpg) no-repeat center;
+  background-size: cover;
+}
 .package-title {
   font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
-
+.package-price {
+  font-size: 3.157em;
+}
 .package-price span {
   font-size: 22px;
   position: relative;
@@ -22,14 +28,13 @@
 }
 
 .subscribe {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 0px;
   color: #3c2f2f;
   letter-spacing: 2px;
-  display: flex !important;
-  align-items: center;
+  line-height: 0;
   border-color: transparent !important;
   cursor: pointer;
 }
@@ -80,6 +85,9 @@
 .blog-list-title a {
   color: #3c2f2f;
 }
+.blog-created li img{
+  margin-top: -2px;
+}
 
 #newsletter {
   padding: 150px 0;
@@ -87,6 +95,17 @@
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.meetbg {
+  position: relative;
+  height: 800px;
+  width:100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#meet .content {
+  padding: 90px 0;
 }
 
 .form-newsletter input {
@@ -111,14 +130,42 @@
   border: none;
 }
 
+.close {
+  color:#fff !important;
+  font-weight: 400;
+  font-size: 2rem;
+  outline: none;
+}
+.steps li {
+  font-size: 1.5rem;
+}
+
 @media (min-width: 768px) {
   .review-body {
     padding: 0 5rem;
   }
 }
 
+@media (min-width: 992px) {
+  #meet .content {
+    padding: 190px 0 190px 50px;
+  }
+  .meetbg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-position: center;
+  }
+
+}
+
 @media (min-width: 1200px) {
   .package {
     padding: 5rem;
+  }
+  #video {
+    padding: 200px 0;
   }
 }
