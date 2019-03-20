@@ -17,11 +17,16 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   text-transform: unset;
   letter-spacing: normal;
 }
+
+h2 {
+  letter-spacing: 2px;
+}
+
 
 h4.logo-text {
   font-family: 'Frank Ruhl Libre', serif;
@@ -34,6 +39,7 @@ h4.logo-text {
 h4, h5, h6 {
   font-family: 'Josefin Sans', sans-serif;
   font-style: normal;
+  font-weight: 400;
 }
 
 header {
@@ -58,7 +64,7 @@ a:hover {
 }
 
 .bg-black-coffee {
-  background-color: #000;
+  background-color: #000000 !important;
 }
 
 .text-orange {
@@ -73,24 +79,28 @@ a:hover {
 }
 
 .alink {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   text-transform: uppercase;
   font-weight: 700;
   color: #fff !important;
   background-color: #da3b33;
   border-radius: 0px;
   letter-spacing: 2px;
-  display: flex !important;
-  align-items: center;
+  line-height: 0;
+  cursor: pointer;
 }
 
 .playlink {
-  padding: 1rem 1.5rem;
   border: 1.5px solid #fff !important;
   background-color: transparent !important;
-  border-radius: 0px;
+  border-radius: 100%;
   outline: none !important;
   box-shadow: none !important;
+  width: 80px;
+  height: 80px;
+}
+.playlink.hvr-ripple-out:before {
+  border-radius: 100%;
 }
 
 .join-us {
@@ -116,6 +126,7 @@ main {
 
 .component {
   padding: 90px 0;
+  position: relative;
 }
 
 .card {
@@ -139,20 +150,20 @@ footer a {
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.5rem;
+  justify-content: flex-start;
+}
+.footer-info li img {
+  width: 20px;
+  max-width: unset;
 }
 
 .footer-info a {
   color: #000000;
 }
 
-.footer-info li img {
-  margin-top: 2px;
-}
-
 #copywrite {
   font-size: 15px;
 }
-
 
 
 /*    Shadow    */

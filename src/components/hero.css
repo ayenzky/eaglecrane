@@ -18,7 +18,7 @@
   z-index: 1;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.54);
 }
 
 .video-background iframe {
@@ -54,14 +54,22 @@
 .hero-main-content {
   padding: 50px 0;
 }
+.hero-title {
+  text-shadow: 0 1px 1px #000;
+}
 
 .hero-subtitle {
   font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: normal;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 1px #000;
 }
 
 
 @media (min-width: 992px) {
+  .hero-title {
+    font-size:7em;
+    letter-spacing: 10px;
+  }
   .hero-main {
     padding: 100px 0;
   }
@@ -72,7 +80,7 @@
 
 @media (min-width: 1200px) {
   .hero-content {
-    padding: 300px 0;
+    padding: 200px 0;
   }
   .hero {
     min-height: 100vh;

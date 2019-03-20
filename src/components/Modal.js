@@ -28,7 +28,8 @@ export default class Modals extends Component {
           {this.props.html}
         </Button>
         <Modal size={this.props.size} show={this.state.show} onHide={this.handleClose}
-               aria-labelledby="contained-modal-title-vcenter"
+               aria-labelledby="contained-modal-title-vcenter" 
+               dialogClassName={this.props.mclass}
                centered
         >
           {this.props.children}

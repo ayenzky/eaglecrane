@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 import Iframe from 'react-iframe'
+import VideoModal from '../components/Modal'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import Swiper from 'swiper/dist/js/swiper.esm.bundle'
@@ -75,8 +76,37 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </section>
+        <section id="video" className="component">
+          <div className="container text-center">
+            <LazyLoadImage effect="blur" src="/img/eaglecranebirds.png"/>
+          </div>
+          <div className="d-flex justify-content-center mt-3">
+        <VideoModal
+                                size='xl'
+                                mclass='modal-900w'
+                                id='play-button'
+                                html=<img src="/img/play-arrow.svg" width="30" className="mb-0" alt="play"/>
+                                buttonclass='btn btn-primary playlink hvr-ripple-out'
+                                >
+                                <div style={{padding:`56.25% 0 0 0`, position:`relative`}}>
+                                    <iframe title="eagle and crane" id="myvideo" src="https://player.vimeo.com/video/295221419?autoplay=1&title=0&byline=0&portrait=0&loop=1" 
+                                        style={{
+                                            position:`absolute`,
+                                            top:0,
+                                            left:0,
+                                            width:`100%`,
+                                            height:`100%`
+                                        }} allow="autoplay" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe>
+                                </div>
+                            </VideoModal>
+                            </div>
+        </section>
         <section id="how-it-works" className="component">
           <div className="container">
+            <div className="row">
+              <div className="col-md-6"></div>
+              <div className="col-md-6"></div>
+            </div>
             <div className="intro text-center mb-5">
               <LazyLoadImage
                 effect="blur"
@@ -140,7 +170,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <section id="subscribe" className="component bg-dirty-white py-0">
+        <section id="subscription" title="subscription" className="component bg-dirty-white py-0">
           <div className="container-fluid">
             <div className="intro text-center mb-5 d-none">
               <h2>Coffee Club Package</h2>
@@ -174,7 +204,7 @@ class IndexPage extends React.Component {
                         show={this.state.freeTrialShow}
                         onHide={freeTrialClose}
                       >
-                        <Modal.Header closeButton>
+                        <Modal.Header className="bg-black-coffee text-white" closeButton>
                           <Modal.Title>Free Trial Subscription</Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="modal-body">
@@ -211,7 +241,7 @@ class IndexPage extends React.Component {
                         show={this.state.recommendedShow}
                         onHide={recommendedClose}
                       >
-                        <Modal.Header closeButton>
+                        <Modal.Header className="bg-black-coffee text-white" closeButton>
                           <Modal.Title>Recommended Subscription</Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="modal-body">
@@ -227,6 +257,34 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </div>
+        </section>
+        <section id="meet" className="component p-0">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6 ml-md-auto">
+              <div className="content">
+              <div className="intro">
+              <h5>Meet the Crew</h5>
+              <h2 className="text-uppercase">
+                Eagle & Crane Coffee Co.
+              </h2>
+            </div>
+              <h5 className="mb-4">Mackynzie Schutz - Founder (right) & Cameron Jolly - COO (left)</h5>
+              <p>The two met three years ago in 2016 and they quickly became inseparable. Throughout the past
+several years their lives have seemed to overlap constantly. Always pursuing the same things or
+going through the same trials. Truly two peas in a pod. So after the idea for Eagle & Crane was
+formed in early 2018 by Mackynzie, it was only fitting that, in January of 2019, Cameron would
+join Mack's team.</p>
+              <div class="d-flex justify-content-start mt-4"><a href="/" class="alink hvr-shadow bg-black-coffee text-white">Read More</a></div>
+              </div>
+              </div>
+              <div className="meetbg" style={{
+                  backgroundImage: `url(/img/meeteagleandcrane.jpg)`
+              }}/>
+            </div>
+          </div>
+
+
         </section>
         <section id="customer-reviews" className="component">
           <div className="container">
@@ -385,9 +443,16 @@ class IndexPage extends React.Component {
                             {node.frontmatter.title}
                           </Link>
                         </h4>
-                        <small className="text-uppercase">
-                          {node.frontmatter.date} - {node.frontmatter.author}
-                        </small>
+                        <ul className="blog-created m-0 list-unstyled d-flex justify-content-center align-items-center">
+                          <li className="mr-3">
+                            <LazyLoadImage effect="blur" src="/img/clock.svg"/>
+                            <small className="ml-1 text-uppercase">{node.frontmatter.date}</small>
+                          </li>
+                          <li className="mr-2">
+                            <LazyLoadImage effect="blur" src="/img/001-coffee-cup.svg" width="16px"/>
+                            <small className="ml-1 text-uppercase">{node.frontmatter.author}</small>
+                          </li>
+                        </ul>
                       </div>
                       <div className="blog-list-content">
                         <p>{node.excerpt}</p>
