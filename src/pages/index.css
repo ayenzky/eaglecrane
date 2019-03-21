@@ -50,7 +50,7 @@
 
 #customer-reviews {
   padding: 100px 0;
-  background-image: url(../../static/img/reviewbg.jpg);
+  background-image: url(https://res.cloudinary.com/eagle-crane-co/image/upload/v1553137952/eagleandcrane/reviewbg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,7 +91,7 @@
 
 #newsletter {
   padding: 150px 0;
-  background-image: url(../../static/img/newsletterbg.jpg);
+  background-image: url(https://res.cloudinary.com/eagle-crane-co/image/upload/v1553137128/eagleandcrane/newsletterbg.jpg);
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,6 +99,7 @@
 .meetbg {
   position: relative;
   height: 800px;
+  max-height: 100vw;
   width:100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -108,12 +109,29 @@
   padding: 90px 0;
 }
 
+.what-we-do-bg {
+  position: relative;
+  height: 800px;
+  max-height: 100vw;
+  width:100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#what-we-do .content {
+  padding: 90px 0;
+}
+#newsletter .content {
+  padding: 8rem 3rem;
+}
 .form-newsletter input {
   border-radius: 0;
   height: 60px;
-  box-shadow: none !important;
   outline: none;
-  border: none;
+  border-color: #e9ecef;
+}
+.form-newsletter input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(227, 75, 66, 0.25);
 }
 
 .form-newsletter button {
@@ -122,7 +140,7 @@
   text-transform: uppercase;
   font-weight: 700;
   color: #fff !important;
-  background-color: #eb4f47 !important;
+  background-color: #df433a !important;
   border-radius: 0px;
   letter-spacing: 2px;
   width: 100%;
@@ -150,6 +168,9 @@
   #meet .content {
     padding: 190px 0 190px 50px;
   }
+  #what-we-do .content {
+    padding: 190px 50px 190px 0px;
+  }
   .meetbg {
     position: absolute;
     left: 0;
@@ -157,6 +178,14 @@
     width: 50%;
     height: 100%;
     background-position: center;
+  }
+  .what-we-do-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-position: center; 
   }
 
 }
@@ -167,5 +196,8 @@
   }
   #video {
     padding: 200px 0;
+  }
+  .modal-xxl {
+    max-width: 1420px;
   }
 }

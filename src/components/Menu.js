@@ -26,7 +26,7 @@ export default class Menu extends Component {
                   <li><Link to="/">Home </Link></li>
                   <li><Link to="/">Coffee Club</Link></li>
                   <li><Link to="/">About</Link></li>
-                  <li><Link to="/">Blog</Link></li>
+                  <li><Link to="/blog">Blog</Link></li>
                   <li><Link to="/">Join Us</Link></li>
                   <li><Link to="/">Contact Us </Link></li>
               </ul>

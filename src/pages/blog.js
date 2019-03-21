@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
@@ -27,8 +28,23 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <ul className="blog-created m-0 list-unstyled d-flex align-items-center">
+                <li className="mr-3">
+                  <LazyLoadImage effect="blur" src="/img/clock.svg"/>
+                  <small className="ml-1 text-uppercase">{node.frontmatter.date}</small>
+                </li>
+                <li className="mr-2">
+                  <LazyLoadImage effect="blur" src="/img/001-coffee-cup.svg" width="16px"/>
+                  <small className="ml-1 text-uppercase">{node.frontmatter.author}</small>
+                </li>
+              </ul>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <Link
+                to={`blog/${node.fields.slug}`}
+                className="text-orange"
+              >
+                Read More
+              </Link>
             </div>
           )
         })}
@@ -58,8 +74,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
             title
+            author
           }
         }
       }
