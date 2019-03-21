@@ -319,7 +319,7 @@ join Mack's team.</p>
                 <div className="intro text-center">
                 <h5 className="text-white">Customer Review</h5>
                 <h2 className="text-white text-uppercase">
-                  What Our Customer Say About Us
+                  Our Customer Say On Our Coffee
                 </h2>
               </div>
               </div>
@@ -506,7 +506,7 @@ join Mack's team.</p>
         <section id="newsletter" className="component p-0">
           <div className="container">
             <div className="row">
-              <div className="col-md-6 ml-auto">
+              <div className="col-md-6 ml-auto px-0 px-md-3">
               <div className="content bg-dirty-white">
                 <div className="intro mb-5">
                 <h5>Keep Me Updated</h5>
