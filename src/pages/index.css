@@ -136,14 +136,14 @@
 
 .form-newsletter button {
   border-radius: 0;
-  height: 60px;
+  height: 65px;
   text-transform: uppercase;
   font-weight: 700;
   color: #fff !important;
   background-color: #df433a !important;
   border-radius: 0px;
   letter-spacing: 2px;
-  width: 100%;
+  padding: 0rem 3rem;
   outline: none;
   border: none;
 }
