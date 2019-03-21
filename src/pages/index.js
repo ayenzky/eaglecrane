@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import AnchorLink from '../components/Anchorlink'
 import Layout from '../components/Layout'
 import { Modal } from 'react-bootstrap'
 import Iframe from 'react-iframe'
@@ -64,10 +65,10 @@ class IndexPage extends React.Component {
                   To learn more about how you can help change Africa, please
                   click below.
                 </p>
-                <div class="d-flex justify-content-center mt-4">
+                <div className="d-flex justify-content-center mt-4">
                   <a
                     href="/"
-                    class="subscribe hvr-shadow bg-black-coffee text-white"
+                    className="alink hvr-shadow"
                   >
                     Learn More
                   </a>
@@ -82,10 +83,9 @@ class IndexPage extends React.Component {
           </div>
           <div className="d-flex justify-content-center mt-3">
         <VideoModal
-                                size='xl'
-                                mclass='modal-900w'
+                                size='xxl'
                                 id='play-button'
-                                html=<img src="/img/play-arrow.svg" width="30" className="mb-0" alt="play"/>
+                                html=<img src="/img/play-arrow.svg" width="25" className="mb-0" alt="play"/>
                                 buttonclass='btn btn-primary playlink hvr-ripple-out'
                                 >
                                 <div style={{padding:`56.25% 0 0 0`, position:`relative`}}>
@@ -101,7 +101,7 @@ class IndexPage extends React.Component {
                             </VideoModal>
                             </div>
         </section>
-        <section id="how-it-works" className="component">
+        <section id="how-it-works" className="component bg-dirty-white">
           <div className="container">
             <div className="row">
               <div className="col-md-6"></div>
@@ -169,6 +169,31 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </div>
+        </section>
+        <section id="what-we-do" className="component p-0">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+              <div className="content text-right">
+              <div className="intro mb-4">
+              <h2 className="text-uppercase">
+                Coffee Is What We Do
+              </h2>
+            </div>
+              <p>After visiting Eastern Africa for the second time, Mackynzie Schutz fell deeply in love
+with the people. Shortly into his month long solo venture there he saw that coffee could be a
+powerful vehicle for sustainable change. Mackynzie decided that the best thing he could do was
+to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
+              <div className="d-flex justify-content-end mt-4"><a href="/" className="alink hvr-shadow text-white">Read More</a></div>
+              </div>
+              </div>
+              <div className="what-we-do-bg" style={{
+                  backgroundImage: `url(https://res.cloudinary.com/eagle-crane-co/image/upload/v1553147975/eagleandcrane/whatwedobg.jpg)`
+              }}/>
+            </div>
+          </div>
+
+
         </section>
         <section id="subscription" title="subscription" className="component bg-dirty-white py-0">
           <div className="container-fluid">
@@ -269,13 +294,14 @@ class IndexPage extends React.Component {
                 Eagle & Crane Coffee Co.
               </h2>
             </div>
-              <h5 className="mb-4">Mackynzie Schutz - Founder (right) & Cameron Jolly - COO (left)</h5>
+              <h5>Founder - Mackynzie Schutz (right) </h5>
+              <h5 className="mb-4">COO - Cameron Jolly (left)</h5>
               <p>The two met three years ago in 2016 and they quickly became inseparable. Throughout the past
 several years their lives have seemed to overlap constantly. Always pursuing the same things or
 going through the same trials. Truly two peas in a pod. So after the idea for Eagle & Crane was
 formed in early 2018 by Mackynzie, it was only fitting that, in January of 2019, Cameron would
 join Mack's team.</p>
-              <div class="d-flex justify-content-start mt-4"><a href="/" class="alink hvr-shadow bg-black-coffee text-white">Read More</a></div>
+              <div className="d-flex justify-content-start mt-4"><a href="/" className="alink hvr-shadow text-white">Read More</a></div>
               </div>
               </div>
               <div className="meetbg" style={{
@@ -288,11 +314,15 @@ join Mack's team.</p>
         </section>
         <section id="customer-reviews" className="component">
           <div className="container">
-            <div className="intro text-center">
-              <h5 className="text-white">Customer Review</h5>
-              <h2 className="text-white text-uppercase">
-                What Our Customer Say
-              </h2>
+            <div className="row">
+              <div className="col-md-7 mx-auto">
+                <div className="intro text-center">
+                <h5 className="text-white">Customer Review</h5>
+                <h2 className="text-white text-uppercase">
+                  What Our Customer Say About Us
+                </h2>
+              </div>
+              </div>
             </div>
             <div className="row">
               <div className="col-md-10 mx-auto">
@@ -420,9 +450,12 @@ join Mack's team.</p>
               </div>
             </div>
             <div className="d-flex justify-content-center mt-4">
-              <a href="/" className="alink hvr-shadow">
-                Subscribe
-              </a>
+              <AnchorLink
+                classes = "subscribe hvr-shadow mr-3 bg-orange text-white"
+                href= "subscription"
+              >
+              Subscribe
+              </AnchorLink>
             </div>
           </div>
         </section>
@@ -436,7 +469,7 @@ join Mack's team.</p>
                 {posts.slice(0, 3).map(({ node }) => {
                   // const title = node.frontmatter.title || node.fields.slug
                   return (
-                    <div className="text-center blog-list">
+                    <div className="text-center blog-list" key={node.id}>
                       <div className="blog-list-title mb-3">
                         <h4>
                           <Link to={`blog/${node.fields.slug}`}>
@@ -470,18 +503,19 @@ join Mack's team.</p>
             </div>
           </div>
         </section>
-        <section id="newsletter" className="component">
+        <section id="newsletter" className="component p-0">
           <div className="container">
-            <div className="intro text-center mb-5">
-              <h5 className="text-white">Keep Me Updated</h5>
-              <h2 className="text-white text-uppercase">Newsletter</h2>
-            </div>
             <div className="row">
-              <div className="col-md-6 mx-auto">
+              <div className="col-md-6 ml-auto">
+              <div className="content bg-dirty-white">
+                <div className="intro mb-5">
+                <h5>Keep Me Updated</h5>
+                <h2 className="text-uppercase">Newsletter</h2>
+              </div>
                 <div id="es-subcribe">
                   <form className="form-newsletter">
-                    <div className="form-row d-flex justify-content-center">
-                      <div className="col-md-8 p-0">
+                    <div className="form-row">
+                      <div className="col-12 mb-3">
                         <div className="form-group">
                           <input
                             className="form-control"
@@ -489,9 +523,10 @@ join Mack's team.</p>
                             name="inputEmail"
                             placeholder="Enter Your Email Address"
                           />
+                          <small className="text-muted form-text mt-2">We'll never share your email with anyone else.</small>
                         </div>
                       </div>
-                      <div className="col-md-4 p-0">
+                      <div className="col-12">
                         <div className="form-group">
                           <button
                             className="btn btn-primary hvr-shadow"
@@ -504,6 +539,7 @@ join Mack's team.</p>
                     </div>
                   </form>
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -528,6 +564,7 @@ export const indexPageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 160)
+          id
           fields {
             slug
           }

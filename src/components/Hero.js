@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 import './hero.css'
-import { Link } from "react-scroll";
+import AnchorLink from './Anchorlink'
 
 
 class Hero extends React.Component {
@@ -24,17 +24,12 @@ class Hero extends React.Component {
                         <h1 className="hero-title text-white">EAGLE & CRANE COFFEE CO.</h1>
                         <h4 className="hero-subtitle text-white">COFFEE // SUBSCRIPTION // DIRECT TRADE</h4>
                         <div className="d-flex justify-content-center mt-5">
-                            <Link
-                                activeClass="active"
-                                to="subscription"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration= {500}
-                                className="alink hvr-shadow mr-3"
-                            >
-                            Subscribe
-                            </Link>
+                            <AnchorLink
+                                classes = "subscribe hvr-shadow hvr-ripple-out mr-3 bg-orange text-white"
+                                href= "subscription"
+                              >
+                              Subscribe
+                              </AnchorLink>
                         </div>
                     </div>
                 </div>
