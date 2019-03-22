@@ -133,6 +133,38 @@ main {
   border-radius: 0;
 }
 
+.form-control {
+  border-radius: 0;
+  height: 50px;
+  outline: none;
+  border-color: #e9ecef;
+}
+
+.form-control:focus {
+  border-color: #e34b42;
+  box-shadow: 0 0 0 0.2rem rgba(227, 75, 66, 0.25);
+}
+
+form button[type="submit"] {
+  border-radius: 0;
+  height: 65px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff !important;
+  background-color: #df433a !important;
+  border-radius: 0px;
+  letter-spacing: 2px;
+  padding: 0rem 3rem;
+  outline: none;
+  border: none;
+}
+
+.checked li {
+  background: url(../../static/img/check.svg) no-repeat left 0;
+  padding-left: 30px;
+  background-size: 18px;
+}
+
 footer {
   position: relative;
   border-top: 1px solid #e9ecef;

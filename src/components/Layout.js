@@ -18,7 +18,24 @@ class Layout extends React.Component {
       hero = (
         <Hero/>
       )
-    } else {
+    } 
+    else if (location.pathname === rootPath + `contact`) {
+      hero = (
+        <div className="hero-main">
+          <div className="hero-bg"/>
+          <div className="container">
+              <div className="row">
+                  <div className="col-md-9 pr-md-5">
+                      <div className="hero-main-content">
+                          <h1 className="text-white">{title}</h1>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      )
+    }
+    else {
       hero = (
         <div className="hero-main">
           <div className="hero-bg"/>

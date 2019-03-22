@@ -16,11 +16,12 @@ export default () => (
                     <h4 className="mb-4">Menu</h4>
                     <ul className="list-unstyled ml-0">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Coffee Club</Link></li>
-                        <li><Link to="/">About</Link></li>
+                        <li><Link to="/coffee-club">Coffee Club</Link></li>
+                        <li><Link to="/about-us">About</Link></li>
+                        <li><Link to="/our-company">Our Company</Link></li>
+                        <li><Link to="/our-house-blend">Our House Blend</Link></li>
                         <li><Link to="/blog">Blog</Link></li>
-                        <li><Link to="/">Join Us</Link></li>
-                        <li><Link to="/">Contact Us</Link></li>
+                        <li><Link to="/contact">Contact Us</Link></li>
                     </ul>
                 </div>
                 <div className="col-md-6 col-lg-3 mb-4">

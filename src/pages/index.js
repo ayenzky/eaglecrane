@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 import AnchorLink from '../components/Anchorlink'
 import Layout from '../components/Layout'
 import { Modal } from 'react-bootstrap'
-import Iframe from 'react-iframe'
 import VideoModal from '../components/Modal'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
@@ -61,18 +60,6 @@ class IndexPage extends React.Component {
                   training and by paying sustainable wages for them to support
                   their families.
                 </h5>
-                <p>
-                  To learn more about how you can help change Africa, please
-                  click below.
-                </p>
-                <div className="d-flex justify-content-center mt-4">
-                  <a
-                    href="/"
-                    className="alink hvr-shadow"
-                  >
-                    Learn More
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -184,7 +171,8 @@ class IndexPage extends React.Component {
 with the people. Shortly into his month long solo venture there he saw that coffee could be a
 powerful vehicle for sustainable change. Mackynzie decided that the best thing he could do was
 to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
-              <div className="d-flex justify-content-end mt-4"><a href="/" className="alink hvr-shadow text-white">Read More</a></div>
+            <div className="d-flex justify-content-end mt-4"><Link to="/our-company" className="alink hvr-shadow text-white">Read More</Link></div>
+              
               </div>
               </div>
               <div className="what-we-do-bg" style={{
@@ -228,14 +216,19 @@ to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
                         size="lg"
                         show={this.state.freeTrialShow}
                         onHide={freeTrialClose}
+                        dialogClassName="modal-package"
                       >
                         <Modal.Header className="bg-black-coffee text-white" closeButton>
                           <Modal.Title>Free Trial Subscription</Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="modal-body">
-                          <Iframe
-                            url="https://eagleandcrane-app.herokuapp.com/free-trial"
-                            position="relative"
+                          <iframe
+                            title="free-trial-package"
+                            src="https://eagleandcrane-app.herokuapp.com/free-trial"
+                            allowFullScreen
+                            scrolling="yes"
+                            width="100%"
+                            frameBorder="0"
                           />
                         </Modal.Body>
                       </Modal>
@@ -263,16 +256,22 @@ to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
                       </span>
                       <Modal
                         size="lg"
+                        scrollable="false"
                         show={this.state.recommendedShow}
                         onHide={recommendedClose}
+                        dialogClassName="modal-package"
                       >
                         <Modal.Header className="bg-black-coffee text-white" closeButton>
                           <Modal.Title>Recommended Subscription</Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="modal-body">
-                          <Iframe
-                            url="https://eagleandcrane-app.herokuapp.com/recommended"
-                            position="relative"
+                        <iframe
+                            title="recommended-package"
+                            src="https://eagleandcrane-app.herokuapp.com/recommended"
+                            allowFullScreen
+                            scrolling="yes"
+                            width="100%"
+                            frameBorder="0"
                           />
                         </Modal.Body>
                       </Modal>
@@ -301,7 +300,7 @@ several years their lives have seemed to overlap constantly. Always pursuing the
 going through the same trials. Truly two peas in a pod. So after the idea for Eagle & Crane was
 formed in early 2018 by Mackynzie, it was only fitting that, in January of 2019, Cameron would
 join Mack's team.</p>
-              <div className="d-flex justify-content-start mt-4"><a href="/" className="alink hvr-shadow text-white">Read More</a></div>
+<div className="d-flex justify-content-start mt-4"><Link to="/about-us" className="alink hvr-shadow text-white">Read More</Link></div>
               </div>
               </div>
               <div className="meetbg" style={{
@@ -467,13 +466,13 @@ join Mack's team.</p>
             <div className="row">
               <div className="col-md-5 mx-auto">
                 {posts.slice(0, 3).map(({ node }) => {
-                  // const title = node.frontmatter.title || node.fields.slug
+                  const title = node.frontmatter.title || node.fields.slug
                   return (
                     <div className="text-center blog-list" key={node.id}>
                       <div className="blog-list-title mb-3">
                         <h4>
-                          <Link to={`blog/${node.fields.slug}`}>
-                            {node.frontmatter.title}
+                          <Link to={`blog${node.fields.slug}`}>
+                            {title}
                           </Link>
                         </h4>
                         <ul className="blog-created m-0 list-unstyled d-flex justify-content-center align-items-center">
@@ -490,7 +489,7 @@ join Mack's team.</p>
                       <div className="blog-list-content">
                         <p>{node.excerpt}</p>
                         <Link
-                          to={`blog/${node.fields.slug}`}
+                          to={`blog${node.fields.slug}`}
                           className="text-orange"
                         >
                           Read More
@@ -513,14 +512,14 @@ join Mack's team.</p>
                 <h2 className="text-uppercase">Newsletter</h2>
               </div>
                 <div id="es-subcribe">
-                  <form className="form-newsletter">
+                  <form method="POST" data-form-id="5c7f97278ba9a30a93a2a085" webriq="true" className="form-newsletter">
                     <div className="form-row">
                       <div className="col-12 mb-3">
                         <div className="form-group">
                           <input
                             className="form-control"
                             type="email"
-                            name="inputEmail"
+                            name="Email Address"
                             placeholder="Enter Your Email Address"
                           />
                           <small className="text-muted form-text mt-2">We'll never share your email with anyone else.</small>
