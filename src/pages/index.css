@@ -44,9 +44,6 @@
   cursor: pointer;
 }
 
-.modal-body {
-  height: 550px;
-}
 
 #customer-reviews {
   padding: 100px 0;
@@ -124,17 +121,18 @@
 #newsletter .content {
   padding: 8rem 3rem;
 }
-.form-newsletter input {
+.form-newsletter input, .form-control {
   border-radius: 0;
-  height: 60px;
+  height: 50px;
   outline: none;
   border-color: #e9ecef;
 }
-.form-newsletter input:focus {
+.form-newsletter input:focus, .form-control:focus {
+  border-color: #e34b42;
   box-shadow: 0 0 0 0.2rem rgba(227, 75, 66, 0.25);
 }
 
-.form-newsletter button {
+.form-newsletter button, button[type="submit"] {
   border-radius: 0;
   height: 65px;
   text-transform: uppercase;
@@ -148,6 +146,7 @@
   border: none;
 }
 
+
 .close {
   color:#fff !important;
   font-weight: 400;
@@ -158,7 +157,14 @@
   font-size: 1.5rem;
 }
 
+.modal-package iframe {
+  min-height: 120vh;
+}
+
 @media (min-width: 768px) {
+  .modal-package iframe {
+    min-height: 55vh;
+  }
   .review-body {
     padding: 0 5rem;
   }
@@ -201,3 +207,5 @@
     max-width: 1420px;
   }
 }
+
+
