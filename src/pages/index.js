@@ -158,7 +158,9 @@ class IndexPage extends React.Component {
 with the people. Shortly into his month long solo venture there he saw that coffee could be a
 powerful vehicle for sustainable change. Mackynzie decided that the best thing he could do was
 to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
-            <div className="d-flex justify-content-end mt-4"><Link to="/our-company" className="alink hvr-shadow text-white">Read More</Link></div>
+            <div className="d-flex justify-content-end mt-4">
+              <Link to="/our-company" className="alink hvr-shadow text-white">Read More</Link>
+            </div>
               
               </div>
               </div>
@@ -189,7 +191,7 @@ to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
                       <span>$</span>0<strong>/month</strong>
                     </h2>
                     <p className="mb-0">
-                      One 12oz bag of coffee and pay only $5 for shipping &amp;
+                      One 1lb bag of coffee and pay only $5 for shipping &amp;
                       handling cost.
                     </p>
                     <div className="d-flex justify-content-center mt-4">
@@ -206,11 +208,11 @@ to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
                       <span>$</span>34.99<strong>/month</strong>
                     </h2>
                     <p className="mb-0">
-                      Two 12oz bags of coffee shipped once a month, Standard
+                      Two 1lb bags of coffee shipped once a month, Standard
                       Grind and Medium Roast Profile
                     </p>
                     <div className="d-flex justify-content-center mt-4">
-                      <Link to="/coffee-club" className="subscribe hvr-shadow bg-white">Subscribe</Link>
+                      <Link to="/coffee-club/products/2-bag" className="subscribe hvr-shadow bg-white">Subscribe</Link>
                     </div>
                   </div>
                 </div>
