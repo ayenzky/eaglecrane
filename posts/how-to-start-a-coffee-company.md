@@ -3,7 +3,7 @@ title: How to Start a Coffee Company, Part One
 shortdesc: "Oh boy. I’ve been delaying this trip recap for a very long time because so much happened and I’m not really sure how to cohesively communicate all of it to you. So let’s start from the beginning and do a 30,000ft flyby. I guess if we call this a Part One then we can get into more detail later. So get ready for the first part of my trip, or “How to Start a Coffee Company, part One”"
 updatedDate: 2018-10-12T06:57:34.572Z
 cmsUserSlug: how-to-start-a-coffee-company
-banner: https://cdn.shopify.com/s/files/1/0028/4544/2114/files/2018-01-10_06.56.41_large.jpg?v=1537233395
+banner: https://res.cloudinary.com/eagle-crane-co/image/upload/v1554781574/eagleandcrane/2018-01-10_06.56.41_large.jpg
 leadtag: null
 metadesc: null
 metakeywords: null
@@ -14,7 +14,7 @@ author: Mackynzie Schutz
 
 Oh boy. I’ve been delaying this trip recap for a very long time because so much happened and I’m not really sure how to cohesively communicate all of it to you. So let’s start from the beginning and do a 30,000ft flyby. I guess if we call this a Part One then we can get into more detail later. So get ready for the first part of my trip, or “How to Start a Coffee Company, part One”.
 
-![](https://cdn.shopify.com/s/files/1/0028/4544/2114/files/2018-01-10_06.56.41_large.jpg?v=1537233395)
+![](https://res.cloudinary.com/eagle-crane-co/image/upload/v1554781574/eagleandcrane/2018-01-10_06.56.41_large.jpg)
 
 For those who don’t know, I graduated from a small bible college here in Colorado during the spring of 2017\. That’s a whole other story, but attending Charis Bible College has been the best decision I’ve ever made. It was there that I learned who I’m made to be and how to follow the leading of God in my life. During my time there I had the privilege of visiting the little African country of Uganda and it changed my life, seriously. Then this past January I followed the leading of the Holy Spirit and went back to Uganda with essentially no plan or purpose. All I had to stand on was an overwhelming feeling that I needed to be there and that in faith he would work it all out. So that’s what I did. 
 
@@ -24,7 +24,7 @@ The trip started off strong. My plane was delayed in Denver till past midnight b
 
 As expected, I missed the only flight to Uganda that day and had to stay a full 24 hours in Dubai. Having never been there I took the opportunity to visit the city and see what it was about. Don’t tell my mom but I may or may not have gotten lost on my journey to the Old City center, got propositioned by a few ladies on the way, bought a fake watch, enjoyed a wonderful water taxi ride, and gazed at the tallest building in the world. That building, by the way, is very hard to take pictures of…it’s very, very tall.
 
-![](https://cdn.shopify.com/s/files/1/0028/4544/2114/files/2018-01-09_10.46.40_HDR_large.jpg?v=1537234138)
+![](https://res.cloudinary.com/eagle-crane-co/image/upload/v1554781574/eagleandcrane/2018-01-09_10.46.40_HDR_large.jpg)
 
 Dubai is a strange place and I’d like to see it through the eyes of a local someday. On the outside looking in you can’t help but notice the extravagant wealth of that city. They have the largest, biggest, greatest whatever you can think of. Man made islands, engineering marvels, platinum plated iPhones. You get the idea.
 
