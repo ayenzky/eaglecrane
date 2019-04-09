@@ -13,7 +13,6 @@ const Header = () => (
                         </div>
                     </div>
                     <div className="col-2 col-md-6 d-flex justify-content-end align-items-center ml-auto">
-                        <a className="d-none align-items-center join-us text-uppercase" href="/">Join Us</a>
                         <Menu/>
                 </div>
             </div>

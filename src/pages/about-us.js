@@ -15,7 +15,7 @@ class AboutUsPage extends React.Component {
         <SEO title={siteTitle} description={siteDescription} />
         <section className="component">
         <div className="container">
-              <h5 className="mb-4">Mackynzie Schutz - Founder
+              <h5 className="mb-4">Mackynzie Schutz - Founder &
 Cameron Jolly - COO</h5>
               <p>The two met three years ago in 2016 and they quickly became inseparable. Throughout the past
 several years their lives have seemed to overlap constantly. Always pursuing the same things or
