@@ -158,9 +158,7 @@ class IndexPage extends React.Component {
 with the people. Shortly into his month long solo venture there he saw that coffee could be a
 powerful vehicle for sustainable change. Mackynzie decided that the best thing he could do was
 to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
-            <div className="d-flex justify-content-end mt-4">
-              <Link to="/our-company" className="alink hvr-shadow text-white">Read More</Link>
-            </div>
+            <div className="d-flex justify-content-end mt-4"><Link to="/our-company" className="alink hvr-shadow text-white">Read More</Link></div>
               
               </div>
               </div>

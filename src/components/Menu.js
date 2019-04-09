@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import Link from 'gatsby-plugin-transition-link/AniLink'
 import { Image } from 'react-bootstrap'
 import SideBar from 'react-sidebar'
 import './menu.css'
@@ -23,14 +23,14 @@ export default class Menu extends Component {
         sidebar={
           <div className="navigation">
               <ul className="list-unstyled main-nav m-0">
-                  <li><Link to="/">Home </Link></li>
-                  <li><Link to="/coffee-club">Coffee Club</Link></li>
-                  <li><Link to="/about-us">About</Link></li>
-                  <li><Link to="/our-company">Our Company</Link></li>
-                  <li><Link to="/our-house-blend">Our House Blend</Link></li>
-                  <li><Link to="/partner">Partner</Link></li>
-                  <li><Link to="/blog">Blog</Link></li>
-                  <li><Link to="/contact">Contact Us </Link></li>
+                  <li><Link paintDrip hex="#d43c33" to="/">Home </Link></li>
+                  <li><Link paintDrip hex="#d43c33" to="/coffee-club">Coffee Club</Link></li>
+                  <li><Link paintDrip hex="#d43c33" to="/about-us">About</Link></li>
+                  <li><Link paintDrip hex="#d43c33" to="/our-company">Our Company</Link></li>
+                  <li><Link paintDrip hex="#d43c33" to="/our-house-blend">Our House Blend</Link></li>
+                  <li><Link paintDrip hex="#d43c33" to="/partner">Partner</Link></li>
+                  <li><Link paintDrip hex="#d43c33" to="/blog">Blog</Link></li>
+                  <li><Link paintDrip hex="#d43c33" to="/contact">Contact Us </Link></li>
               </ul>
               <ul className="list-unstyled footer-info mt-4 ml-0">
                   <li><Image src="/img/001-coffee-cup.svg" width="22" className="mr-2 mb-0" alt="business"/><span>Eagle &amp; Crane Coffee Co</span></li>
