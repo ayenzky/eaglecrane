@@ -19,6 +19,7 @@ module.exports = {
         name: `posts`,
       },
     },
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
