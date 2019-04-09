@@ -15,17 +15,15 @@ class CoffeeClubTwoPage extends React.Component {
         <SEO title={siteTitle} description={siteDescription} />
         <section className="component">
         <div className="container">
-            <div className="responsive-embed">
-                <iframe
-                    title="recommended package"
-                    src="https://eagleandcrane-app.herokuapp.com/recommended"
-                    allowFullScreen
-                    scrolling="yes"
-                    width="100%"
-                    height="1100px"
-                    frameBorder="0"
-                    />
-          </div>
+            <iframe
+                title="recommended package"
+                src="https://eagleandcrane-app.herokuapp.com/recommended"
+                allowFullScreen
+                scrolling="yes"
+                width="100%"
+                height="1100px"
+                frameBorder="0"
+                />
         </div>
         </section>
       </Layout>
