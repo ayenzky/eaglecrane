@@ -4,6 +4,7 @@ import Header from './Header'
 import Hero from './Hero'
 import Footer from './Footer'
 import AnchorLink from './Anchorlink'
+import { TransitionPortal } from 'gatsby-plugin-transition-link'
 import 'bootstrap/dist/css/bootstrap.css'
 import './layout.css'
 
@@ -73,6 +74,7 @@ class Layout extends React.Component {
           {children}
         </main>
         <Footer/>
+        <TransitionPortal/>
       </div>
     )
   }
