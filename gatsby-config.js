@@ -3,7 +3,7 @@ module.exports = {
     title: `Eagle & Crane Coffee Co.`,
     author: `Eagle & Crane Coffee`,
     description: `Eagle & Crane Coffee Co. – Eagle & Crane Coffee Co.`,
-    siteUrl: `https://eagleandcrane.com/`,
+    siteUrl: `https://eagleandcrane.com`,
     social: {
       facebook: `eagleandcrane`,
       instagram: `eaglecranecoffee`,
@@ -58,6 +58,7 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
