@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Eagle & Crane Coffee Co.`,
-    author: `Kyle Mathews`,
+    author: `Eagle & Crane Coffee`,
     description: `Eagle & Crane Coffee Co. – Eagle & Crane Coffee Co.`,
     siteUrl: `https://eagleandcrane.com/`,
     social: {
-      twitter: `kylemathews`,
+      facebook: `eagleandcrane`,
+      instagram: `eaglecranecoffee`,
+      vimeo: `user25548849`
     },
   },
   plugins: [

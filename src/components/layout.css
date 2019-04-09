@@ -60,7 +60,7 @@ a:hover {
 }
 
 .bg-orange {
-  background-color: #da3b33;
+  background-color: #d43c33;
 }
 
 .bg-black-coffee {
@@ -68,14 +68,14 @@ a:hover {
 }
 
 .text-orange {
-  color: #da3b33;
+  color: #d43c33;
 }
 
 .text-coffee {
   color: #854442;
 }
 .text-black-coffee {
-  color:#000000;
+  color:#3c2f2f !important;
 }
 
 .alink {
@@ -83,7 +83,7 @@ a:hover {
   text-transform: uppercase;
   font-weight: 700;
   color: #fff !important;
-  background-color: #da3b33;
+  background-color: #d43c33;
   border-radius: 0px;
   letter-spacing: 2px;
   line-height: 0;
@@ -151,7 +151,7 @@ form button[type="submit"] {
   text-transform: uppercase;
   font-weight: 700;
   color: #fff !important;
-  background-color: #df433a !important;
+  background-color: #d43c33 !important;
   border-radius: 0px;
   letter-spacing: 2px;
   padding: 0rem 3rem;

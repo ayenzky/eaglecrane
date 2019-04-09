@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import AnchorLink from '../components/Anchorlink'
 import Layout from '../components/Layout'
-import { Modal } from 'react-bootstrap'
 import VideoModal from '../components/Modal'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
@@ -12,14 +11,6 @@ import SEO from '../components/seo'
 import './index.css'
 
 class IndexPage extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-
-    this.state = {
-      freeTrialShow: false,
-      recommendedShow: false,
-    }
-  }
 
   componentDidMount() {
     if (window) {
@@ -38,10 +29,6 @@ class IndexPage extends React.Component {
     const { data } = this.props
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = this.props.data.site.siteMetadata.description
-    const freeTrialShow = () => this.setState({ freeTrialShow: true })
-    const recommendedShow = () => this.setState({ recommendedShow: true })
-    const freeTrialClose = () => this.setState({ freeTrialShow: false })
-    const recommendedClose = () => this.setState({ recommendedShow: false })
     const posts = data.allMarkdownRemark.edges
 
     return (
@@ -66,7 +53,7 @@ class IndexPage extends React.Component {
         </section>
         <section id="video" className="component">
           <div className="container text-center">
-            <LazyLoadImage effect="blur" src="/img/eaglecranebirds.png"/>
+            <LazyLoadImage effect="blur" src="/img/eaglecranebirds.png" alt="eagle and crane coffee co"/>
           </div>
           <div className="d-flex justify-content-center mt-3">
         <VideoModal
@@ -206,32 +193,7 @@ to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
                       handling cost.
                     </p>
                     <div className="d-flex justify-content-center mt-4">
-                      <span
-                        className="subscribe hvr-shadow bg-black-coffee text-white"
-                        onClick={freeTrialShow}
-                      >
-                        Subscribe
-                      </span>
-                      <Modal
-                        size="lg"
-                        show={this.state.freeTrialShow}
-                        onHide={freeTrialClose}
-                        dialogClassName="modal-package"
-                      >
-                        <Modal.Header className="bg-black-coffee text-white" closeButton>
-                          <Modal.Title>Free Trial Subscription</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body className="modal-body">
-                          <iframe
-                            title="free-trial-package"
-                            src="https://eagleandcrane-app.herokuapp.com/free-trial"
-                            allowFullScreen
-                            scrolling="yes"
-                            width="100%"
-                            frameBorder="0"
-                          />
-                        </Modal.Body>
-                      </Modal>
+                      <Link to="/free-trial-coffee" className="subscribe hvr-shadow bg-black-coffee text-white">Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -248,33 +210,7 @@ to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
                       Grind and Medium Roast Profile
                     </p>
                     <div className="d-flex justify-content-center mt-4">
-                      <span
-                        className="subscribe hvr-shadow bg-white"
-                        onClick={recommendedShow}
-                      >
-                        Subscribe
-                      </span>
-                      <Modal
-                        size="lg"
-                        scrollable="false"
-                        show={this.state.recommendedShow}
-                        onHide={recommendedClose}
-                        dialogClassName="modal-package"
-                      >
-                        <Modal.Header className="bg-black-coffee text-white" closeButton>
-                          <Modal.Title>Recommended Subscription</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body className="modal-body">
-                        <iframe
-                            title="recommended-package"
-                            src="https://eagleandcrane-app.herokuapp.com/recommended"
-                            allowFullScreen
-                            scrolling="yes"
-                            width="100%"
-                            frameBorder="0"
-                          />
-                        </Modal.Body>
-                      </Modal>
+                      <Link to="/coffee-club" className="subscribe hvr-shadow bg-white">Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -516,13 +452,15 @@ join Mack's team.</p>
                     <div className="form-row">
                       <div className="col-12 mb-3">
                         <div className="form-group">
+                          <label htmlFor="email_address">Enter Your Email Address</label>
                           <input
                             className="form-control"
                             type="email"
                             name="Email Address"
-                            placeholder="Enter Your Email Address"
+                            id="email_address"
+                            placeholder="info@yourmail.com"
                           />
-                          <small className="text-muted form-text mt-2">We'll never share your email with anyone else.</small>
+                          <small className="text-dark form-text mt-2">We'll never share your email with anyone else.</small>
                         </div>
                       </div>
                       <div className="col-12">
