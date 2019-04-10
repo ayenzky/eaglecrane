@@ -1,12 +1,31 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Container, Form, Button, Col, Row } from 'react-bootstrap'
-// import { LazyLoadComponent } from 'react-lazy-load-image-component'
-import {BrowserRouter} from "react-router-dom";
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
 class PartnerPage extends React.Component {
+  loadScript() {
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.id = 'webriqform'
+    script.src = 'https://forms.webriq.com/js/initForms'
+    document.body.appendChild(script)
+    const headScript = document.getElementsByTagName('script')[0]
+    headScript.parentNode.insertBefore(script, headScript)
+  }
+  componentWillUnmount() {
+    if(window) {
+      console.log('remove script')
+      document.getElementById('webriqform').remove();
+    }
+  }
+  componentDidMount(){
+    if(window) {
+     this.loadScript();
+    }
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +59,7 @@ class PartnerPage extends React.Component {
               <Col md={7}>
                 <h5 className="mb-5">Fill in the form below to subscribe.</h5>
                 <div id="partner-subcribe">
-                    <BrowserRouter>
+                    <LazyLoadComponent delayTime={500}>
                     <Form name="Partners Subscription"  method="POST" data-form-id="5caae1e4e624d64a2848d088" webriq="true" className="form-partner">
                       <div className="form-row">
                         <div className="col-12 mb-3">
@@ -83,7 +102,7 @@ class PartnerPage extends React.Component {
                         </div>
                       </div>
                     </Form>
-                    </BrowserRouter>
+                    </LazyLoadComponent>
                   </div>
               </Col>
             </Row>
