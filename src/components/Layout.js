@@ -9,8 +9,30 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './layout.css'
 
 
-
 class Layout extends React.Component {
+  loadScript() {
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.id = 'webriqform'
+    script.src = 'https://forms.webriq.com/js/initForms'
+    document.body.appendChild(script)
+    const headScript = document.getElementsByTagName('script')[0]
+    headScript.parentNode.insertBefore(script, headScript)
+  }
+  componentWillUnmount() {
+    if(window) {
+      console.log('remove script')
+      document.getElementById('webriqform').remove();
+    }
+  }
+  componentDidMount(){
+    if(window) {
+      this.loadScript();
+    }
+  }
+
+  
+
   render() {
     const { location, title, children, customclass } = this.props
     const rootPath = `${__PATH_PREFIX__}/`

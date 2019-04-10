@@ -465,6 +465,12 @@ join Mack's team.</p>
                       </div>
                       <div className="col-12">
                         <div className="form-group">
+                          <div className="webriq-recaptcha"></div>
+                        </div>
+                      </div>
+
+                      <div className="col-12">
+                        <div className="form-group">
                           <button
                             className="btn btn-primary hvr-shadow"
                             type="submit"
