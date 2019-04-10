@@ -6,6 +6,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
+
+
 class ContactPage extends React.Component {
    loadScript() {
     const script = document.createElement('script')
@@ -30,8 +32,15 @@ class ContactPage extends React.Component {
   constructor(...args) {
     super(...args);
 
-    this.state = { validated: false };
+    this.state = { 
+      validated: false
+    };
   }
+
+
+
+
+
 
   handleSubmit(event) {
     const form = event.currentTarget;
@@ -44,6 +53,7 @@ class ContactPage extends React.Component {
 
 
   render() {
+
     const { data } = this.props
     const siteTitle = "Contact"
     const siteDescription = data.site.siteMetadata.description
@@ -55,6 +65,7 @@ class ContactPage extends React.Component {
         <section className="component">
         <div className="container">
           <Row>
+
           <Col md={6} className="pr-md-5">
           <h2 className="mb-5">We love to hear from you.</h2>
           <Form
