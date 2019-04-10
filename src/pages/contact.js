@@ -7,16 +7,6 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
 class ContactPage extends React.Component {
-  componentDidMount() {
-    if(window) {
-      const script = document.createElement('script')
-      script.type = 'text/javascript'
-      script.src = 'https://forms.webriq.com/js/initForms'
-      document.body.appendChild(script)
-      const headScript = document.getElementsByTagName('script')[0]
-      headScript.parentNode.insertBefore(script, headScript)
-    }
-  }
   constructor(...args) {
     super(...args);
 
@@ -31,6 +21,7 @@ class ContactPage extends React.Component {
     }
     this.setState({ validated: true });
   }
+
 
   render() {
     const { data } = this.props

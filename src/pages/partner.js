@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Container, Form, Button, Col, Row } from 'react-bootstrap'
+// import { LazyLoadComponent } from 'react-lazy-load-image-component'
+import {BrowserRouter} from "react-router-dom";
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
@@ -38,7 +40,8 @@ class PartnerPage extends React.Component {
               <Col md={7}>
                 <h5 className="mb-5">Fill in the form below to subscribe.</h5>
                 <div id="partner-subcribe">
-                    <Form name="Partners Subscription" method="POST" data-form-id="5caae1e4e624d64a2848d088" webriq="true" className="form-partner">
+                    <BrowserRouter>
+                    <Form name="Partners Subscription"  method="POST" data-form-id="5caae1e4e624d64a2848d088" webriq="true" className="form-partner">
                       <div className="form-row">
                         <div className="col-12 mb-3">
                           <div className="form-group mb-4">
@@ -61,6 +64,9 @@ class PartnerPage extends React.Component {
                             </select>
                           </div>
                           {this.state.show && <Box/>}
+                          <div className="form-group mb-4">
+                            <div className="webriq-recaptcha"></div>
+                          </div>
                         </div>
                         
                           
@@ -77,6 +83,7 @@ class PartnerPage extends React.Component {
                         </div>
                       </div>
                     </Form>
+                    </BrowserRouter>
                   </div>
               </Col>
             </Row>

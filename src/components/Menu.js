@@ -23,7 +23,7 @@ export default class Menu extends Component {
         sidebar={
           <div className="navigation">
               <ul className="list-unstyled main-nav m-0">
-                  <li><Link paintDrip hex="#d43c33" to="/">Home </Link></li>
+                  <li><Link to="/">Home </Link></li>
                   <li><Link paintDrip hex="#d43c33" to="/coffee-club">Coffee Club</Link></li>
                   <li><Link paintDrip hex="#d43c33" to="/about-us">About</Link></li>
                   <li><Link paintDrip hex="#d43c33" to="/our-company">Our Company</Link></li>
