@@ -77,10 +77,6 @@ class IndexPage extends React.Component {
         </section>
         <section id="how-it-works" className="component bg-dirty-white">
           <div className="container">
-            <div className="row">
-              <div className="col-md-6"></div>
-              <div className="col-md-6"></div>
-            </div>
             <div className="intro text-center mb-5">
               <LazyLoadImage
                 effect="blur"
@@ -147,7 +143,7 @@ class IndexPage extends React.Component {
         <section id="what-we-do" className="component p-0">
           <div className="container">
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-lg-6">
               <div className="content text-right">
               <div className="intro mb-4">
               <h2 className="text-uppercase">
@@ -221,7 +217,7 @@ to be on the US side of the trade relationship. Thus Eagle & Crane was born.</p>
         <section id="meet" className="component p-0">
           <div className="container">
             <div className="row">
-              <div className="col-md-6 ml-md-auto">
+              <div className="col-lg-6 ml-lg-auto">
               <div className="content">
               <div className="intro">
               <h5>Meet the Crew</h5>
