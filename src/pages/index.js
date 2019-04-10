@@ -11,9 +11,26 @@ import SEO from '../components/seo'
 import './index.css'
 
 class IndexPage extends React.Component {
+  loadScript() {
+      const script = document.createElement('script')
+      script.type = 'text/javascript'
+      script.id = 'webriqform'
+      script.src = 'https://forms.webriq.com/js/initForms'
+      document.body.appendChild(script)
+      const headScript = document.getElementsByTagName('script')[0]
+      headScript.parentNode.insertBefore(script, headScript)
+    }
+    componentWillUnmount() {
+      if(window) {
+        console.log('remove script')
+        document.getElementById('webriqform').remove();
+      }
+    }
 
   componentDidMount() {
     if (window) {
+      this.loadScript();
+
       new Swiper('.swiper-container', {
         slidesPerView: 1,
         centeredSlides: true,
