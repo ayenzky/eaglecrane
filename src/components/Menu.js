@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-plugin-transition-link/AniLink'
-import { Image, Nav } from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
 import SideBar from 'react-sidebar'
 import './menu.css'
 
@@ -31,7 +31,6 @@ export default class Menu extends Component {
                   <li><Link paintDrip hex="#d43c33" to="/partner">Partner</Link></li>
                   <li><Link paintDrip hex="#d43c33" to="/blog">Blog</Link></li>
                   <li><Link paintDrip hex="#d43c33" to="/contact">Contact Us </Link></li>
-                  <Nav.Link as={Link} to="/contact">Con</Nav.Link>
               </ul>
               <ul className="list-unstyled footer-info mt-4 ml-0">
                   <li><Image src="/img/001-coffee-cup.svg" width="22" className="mr-2 mb-0" alt="business"/><span>Eagle &amp; Crane Coffee Co</span></li>
