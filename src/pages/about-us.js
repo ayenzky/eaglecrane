@@ -5,6 +5,11 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
 class AboutUsPage extends React.Component {
+  componentWillUnmount() {
+    if(window) {
+      document.getElementById('webriq').remove();
+    }
+  }
   render() {
     const { data } = this.props
     const siteTitle = "About Us"
