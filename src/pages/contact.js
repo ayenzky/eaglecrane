@@ -4,60 +4,20 @@ import { Form, Button, Col, Row } from 'react-bootstrap'
 import { LazyLoadImage, LazyLoadComponent } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import Layout from '../components/Layout'
+import WebriqForm from '../components/Form'
 import SEO from '../components/seo'
 
 
 
 class ContactPage extends React.Component {
-   loadScript() {
-    const script = document.createElement('script')
-    script.type = 'text/javascript'
-    script.id = 'webriqform'
-    script.src = 'https://forms.webriq.com/js/initForms'
-    document.body.appendChild(script)
-    const headScript = document.getElementsByTagName('script')[0]
-    headScript.parentNode.insertBefore(script, headScript)
-  }
-  componentWillUnmount() {
-    if(window) {
-      console.log('remove script')
-      document.getElementById('webriqform').remove();
-    }
-  }
-  componentDidMount(){
-    if(window) {
-     this.loadScript();
-    }
-  }
-  constructor(...args) {
-    super(...args);
 
-    this.state = { 
-      validated: false
-    };
-  }
-
-
-
-
-
-
-  handleSubmit(event) {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    this.setState({ validated: true });
-  }
-
+ 
 
   render() {
 
     const { data } = this.props
     const siteTitle = "Contact"
     const siteDescription = data.site.siteMetadata.description
-    const { validated } = this.state;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -68,15 +28,9 @@ class ContactPage extends React.Component {
 
           <Col md={6} className="pr-md-5">
           <h2 className="mb-5">We love to hear from you.</h2>
-          <Form
-            name="Contact Form"
-            method="POST"
-            data-form-id="5c94566938b7513aa29d9ddd"
-            webriq="true"
-            noValidate
-            validated={validated}
-            onSubmit={e => this.handleSubmit(e)}
-            
+          <WebriqForm
+            formName="Contact Form"
+            formId="5c94566938b7513aa29d9ddd"
           >
           <Form.Row>
           <Form.Group className="mb-4" as={Col} md="12" controlId="validationCustom01">
@@ -124,7 +78,7 @@ class ContactPage extends React.Component {
           </Form.Group>
           </Form.Row>
           <Button type="submit">Send Message</Button>
-          </Form>
+          </WebriqForm>
           </Col>
           <Col md={6}>
             <div className="content">

@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import AnchorLink from '../components/Anchorlink'
 import Layout from '../components/Layout'
 import VideoModal from '../components/Modal'
+import WebriqForm from '../components/Form'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import Swiper from 'swiper/dist/js/swiper.esm.bundle'
@@ -11,25 +12,10 @@ import SEO from '../components/seo'
 import './index.css'
 
 class IndexPage extends React.Component {
-  loadScript() {
-      const script = document.createElement('script')
-      script.type = 'text/javascript'
-      script.id = 'webriqform'
-      script.src = 'https://forms.webriq.com/js/initForms'
-      document.body.appendChild(script)
-      const headScript = document.getElementsByTagName('script')[0]
-      headScript.parentNode.insertBefore(script, headScript)
-    }
-    componentWillUnmount() {
-      if(window) {
-        console.log('remove script')
-        document.getElementById('webriqform').remove();
-      }
-    }
+
 
   componentDidMount() {
     if (window) {
-      this.loadScript();
 
       new Swiper('.swiper-container', {
         slidesPerView: 1,
@@ -42,6 +28,7 @@ class IndexPage extends React.Component {
       })
     }
   }
+
   render() {
     const { data } = this.props
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -461,7 +448,7 @@ join Mack's team.</p>
                 <h2 className="text-uppercase">Newsletter</h2>
               </div>
                 <div id="es-subcribe">
-                  <form method="POST" data-form-id="5c7f97278ba9a30a93a2a085" webriq="true" className="form-newsletter">
+                  <WebriqForm formId="5c7f97278ba9a30a93a2a085" formName="Subscription" className="form-newsletter">
                     <div className="form-row">
                       <div className="col-12 mb-3">
                         <div className="form-group">
@@ -493,7 +480,7 @@ join Mack's team.</p>
                         </div>
                       </div>
                     </div>
-                  </form>
+                  </WebriqForm>
                 </div>
               </div>
               </div>
