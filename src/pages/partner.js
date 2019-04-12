@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Container, Button, Col, Row } from 'react-bootstrap'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import WebriqForm from '../components/Form'
+import WebriQForm from '@bit/webriq.components.webriq-form'
 // import LoadScript from '../components/LoadScript'
 
 class PartnerPage extends React.Component {
@@ -89,7 +89,7 @@ class WebriqFormExt extends Component {
 
   render () {
     return (
-      <WebriqForm formName="Partners Subscription" formId="5caae1e4e624d64a2848d088" className="form-partner">
+      <WebriQForm name="Partners Subscription" data-form-id="5caae1e4e624d64a2848d088" className="form-partner">
       <div className="form-row">
         <div className="col-12 mb-3">
           <div className="form-group mb-4">
@@ -104,8 +104,8 @@ class WebriqFormExt extends Component {
             <small className="text-muted form-text mt-2">We'll never share your email with anyone else.</small>
           </div>
           <div className="form-group mb-4">
-            <label htmlFor="Partners" className="d-block">Partnered Organizations <span className="text-danger">*</span></label>
-            <select className="form-control" name="Partners" id="partners" onChange={this.handleChange.bind(this)} required>
+            <label htmlFor="Partner" className="d-block">Partnered Organizations <span className="text-danger">*</span></label>
+            <select className="form-control" name="Partner" id="partners" onChange={this.handleChange.bind(this)} required>
               <option value="" default>Choose Partner Organization</option>
               <option value="Charis Bible College">Charis Bible College</option>
               <option value="One Soma Global">One Soma Global</option>
@@ -128,7 +128,7 @@ class WebriqFormExt extends Component {
           </div>
         </div>
       </div>
-    </WebriqForm>
+    </WebriQForm>
 
     )
   }
