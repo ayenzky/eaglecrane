@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import AnchorLink from '../components/Anchorlink'
 import Layout from '../components/Layout'
 import VideoModal from '../components/Modal'
-import WebriqForm from '../components/Form'
+import WebriQForm from '@bit/webriq.components.webriq-form'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import Swiper from 'swiper/dist/js/swiper.esm.bundle'
@@ -448,7 +448,7 @@ join Mack's team.</p>
                 <h2 className="text-uppercase">Newsletter</h2>
               </div>
                 <div id="es-subcribe">
-                  <WebriqForm formId="5c7f97278ba9a30a93a2a085" formName="Subscription" className="form-newsletter">
+                  <WebriQForm data-form-id="5c7f97278ba9a30a93a2a085" name="Subscription" className="form-newsletter">
                     <div className="form-row">
                       <div className="col-12 mb-3">
                         <div className="form-group">
@@ -480,7 +480,7 @@ join Mack's team.</p>
                         </div>
                       </div>
                     </div>
-                  </WebriqForm>
+                  </WebriQForm>
                 </div>
               </div>
               </div>
