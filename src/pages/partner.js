@@ -3,9 +3,27 @@ import { graphql } from 'gatsby'
 import { Container, Button, Col, Row } from 'react-bootstrap'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import WebriQForm from '@bit/webriq.components.webriq-form'
+import WebriqForm from '../components/Form'
+// import LoadScript from '../components/LoadScript'
 
 class PartnerPage extends React.Component {
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     scriptReady: false
+  //   };
+
+  // }
+
+  // componentWillMount() {
+  //   LoadScript(() => {
+  //     // Work to do after the library loads
+  //     this.setState({ scriptReady: true });
+      
+  //   });   
+  // }
+  
 
   render() {
     const { data } = this.props
@@ -71,7 +89,7 @@ class WebriqFormExt extends Component {
 
   render () {
     return (
-      <WebriQForm name="Partners Subscription" data-form-id="5caae1e4e624d64a2848d088" className="form-partner">
+      <WebriqForm formName="Partners Subscription" formId="5caae1e4e624d64a2848d088" className="form-partner">
       <div className="form-row">
         <div className="col-12 mb-3">
           <div className="form-group mb-4">
@@ -110,7 +128,7 @@ class WebriqFormExt extends Component {
           </div>
         </div>
       </div>
-    </WebriQForm>
+    </WebriqForm>
 
     )
   }
