@@ -57,6 +57,10 @@
 .hero-main-content {
   padding: 50px 0;
 }
+.hero-title > div > div,
+.hero-subtitle > div > div{
+  opacity: 0;
+}
 .hero-title {
   text-shadow: 0 1px 1px #000;
 }
