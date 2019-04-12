@@ -2,7 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import {
   FacebookIcon, 
   FacebookShareButton, 
@@ -28,10 +29,19 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} banner={siteBanner} />
         <section className="component">
         <div className="container">
-        <p>{post.frontmatter.date} - {post.frontmatter.author}</p>
+        <ul className="blog-created m-0 list-unstyled d-flex align-items-center">
+          <li className="mr-3">
+            <LazyLoadImage effect="blur" src="/img/clock.svg"/>
+            <small className="ml-1 text-uppercase">{post.frontmatter.date}</small>
+          </li>
+          <li className="mr-2">
+            <LazyLoadImage effect="blur" src="/img/001-coffee-cup.svg" width="16px"/>
+            <small className="ml-1 text-uppercase">{post.frontmatter.author}</small>
+          </li>
+        </ul>
         <div className="the-social d-flex mb-4">
         <div className="mr-2">
-          <FacebookShareButton  url={`https://eagleandcrane.com/blogs${post.fields.slug}`} title={siteTitle}>
+          <FacebookShareButton  url={`https://eagleandcrane.com/blogs${post.fields.slug}`} quote={siteTitle}>
             <FacebookIcon size={40} round={true}/>
           </FacebookShareButton>
         </div>
@@ -57,12 +67,6 @@ class BlogPostTemplate extends React.Component {
         </div>
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-
         <ul
           style={{
             display: `flex`,
@@ -70,6 +74,7 @@ class BlogPostTemplate extends React.Component {
             justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
+            marginTop: `3rem`
           }}
         >
           <li>
@@ -87,7 +92,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
-        <Link to="/blog" className="text-orange">Take Me Home</Link>
+        <Link to="/blog" className="alink hvr-shadow text-orange">Take Me Home</Link>
         <br />
         <br />
           </div>

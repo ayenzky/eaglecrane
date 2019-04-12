@@ -1,6 +1,8 @@
 /* video background */
 
 .video-background {
+  background: #000 url(https://res.cloudinary.com/eagle-crane-co/image/upload/v1553138328/eagleandcrane/herobgmobile2.jpg) no-repeat center bottom;
+  background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +20,7 @@
   z-index: 1;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.54);
 }
 
 .video-background iframe {
@@ -30,6 +32,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  display: none;
 }
 
 .hero-content {
@@ -45,7 +48,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../../static/img/heromainbg.jpg);
+  background-image: url(https://res.cloudinary.com/eagle-crane-co/image/upload/v1553136372/eagleandcrane/herobgmobile.jpg);
   background-position: right center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,14 +57,31 @@
 .hero-main-content {
   padding: 50px 0;
 }
+.hero-title {
+  text-shadow: 0 1px 1px #000;
+}
 
 .hero-subtitle {
   font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: normal;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 1px #000;
 }
 
+@media (min-width: 768px) {
+  .video-background {
+    background-image: none;
+  }
+  .video-background iframe {
+    display: block;
+  }
+
+}
 
 @media (min-width: 992px) {
+  .hero-title {
+    font-size:7em;
+    letter-spacing: 10px;
+  }
   .hero-main {
     padding: 100px 0;
   }
@@ -72,7 +92,7 @@
 
 @media (min-width: 1200px) {
   .hero-content {
-    padding: 300px 0;
+    padding: 200px 0;
   }
   .hero {
     min-height: 100vh;

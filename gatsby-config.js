@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Eagle & Crane Coffee Co.`,
-    author: `Kyle Mathews`,
+    author: `Eagle & Crane Coffee`,
     description: `Eagle & Crane Coffee Co. – Eagle & Crane Coffee Co.`,
-    siteUrl: `https://eagleandcrane.com/`,
+    siteUrl: `https://eagleandcrane.com`,
     social: {
-      twitter: `kylemathews`,
+      facebook: `eagleandcrane`,
+      instagram: `eaglecranecoffee`,
+      vimeo: `user25548849`
     },
   },
   plugins: [
@@ -17,13 +19,7 @@ module.exports = {
         name: `posts`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/assets/img`,
-        name: `image_assets`,
-      },
-    },
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -60,9 +56,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-134933311-1`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,

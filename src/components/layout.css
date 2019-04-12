@@ -17,11 +17,16 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   text-transform: unset;
   letter-spacing: normal;
 }
+
+h2 {
+  letter-spacing: 2px;
+}
+
 
 h4.logo-text {
   font-family: 'Frank Ruhl Libre', serif;
@@ -34,6 +39,7 @@ h4.logo-text {
 h4, h5, h6 {
   font-family: 'Josefin Sans', sans-serif;
   font-style: normal;
+  font-weight: 400;
 }
 
 header {
@@ -50,47 +56,51 @@ a:hover {
 }
 
 .bg-dirty-white {
-  background-color: #e0e5ea;
+  background-color: #f9f9f9;
 }
 
 .bg-orange {
-  background-color: #da3b33;
+  background-color: #d43c33;
 }
 
 .bg-black-coffee {
-  background-color: #000;
+  background-color: #000000 !important;
 }
 
 .text-orange {
-  color: #da3b33;
+  color: #d43c33;
 }
 
 .text-coffee {
   color: #854442;
 }
 .text-black-coffee {
-  color:#000000;
+  color:#3c2f2f !important;
 }
 
 .alink {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   text-transform: uppercase;
   font-weight: 700;
   color: #fff !important;
-  background-color: #da3b33;
+  background-color: #d43c33;
   border-radius: 0px;
   letter-spacing: 2px;
-  display: flex !important;
-  align-items: center;
+  line-height: 0;
+  cursor: pointer;
 }
 
 .playlink {
-  padding: 1rem 1.5rem;
   border: 1.5px solid #fff !important;
   background-color: transparent !important;
-  border-radius: 0px;
+  border-radius: 100%;
   outline: none !important;
   box-shadow: none !important;
+  width: 80px;
+  height: 80px;
+}
+.playlink.hvr-ripple-out:before {
+  border-radius: 100%;
 }
 
 .join-us {
@@ -116,10 +126,43 @@ main {
 
 .component {
   padding: 90px 0;
+  position: relative;
 }
 
 .card {
   border-radius: 0;
+}
+
+.form-control {
+  border-radius: 0;
+  height: 50px;
+  outline: none;
+  border-color: #e9ecef;
+}
+
+.form-control:focus {
+  border-color: #e34b42;
+  box-shadow: 0 0 0 0.2rem rgba(227, 75, 66, 0.25);
+}
+
+form button[type="submit"] {
+  border-radius: 0;
+  height: 65px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff !important;
+  background-color: #d43c33 !important;
+  border-radius: 0px;
+  letter-spacing: 2px;
+  padding: 0rem 3rem;
+  outline: none;
+  border: none;
+}
+
+.checked li {
+  background: url(../../static/img/check.svg) no-repeat left 0;
+  padding-left: 30px;
+  background-size: 18px;
 }
 
 footer {
@@ -139,20 +182,20 @@ footer a {
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.5rem;
+  justify-content: flex-start;
+}
+.footer-info li img {
+  width: 20px;
+  max-width: unset;
 }
 
 .footer-info a {
   color: #000000;
 }
 
-.footer-info li img {
-  margin-top: 2px;
-}
-
 #copywrite {
   font-size: 15px;
 }
-
 
 
 /*    Shadow    */

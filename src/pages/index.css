@@ -1,9 +1,30 @@
+#video {
+  background: #000 url(../../static/img/videobg.jpg) no-repeat center;
+  background-size: cover;
+}
+#home-blend {
+  background: #000 url(https://res.cloudinary.com/eagle-crane-co/image/upload/v1554787923/eagleandcrane/pouring-hot-coffee_2048x.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+#home-blend::before {
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(233, 236, 239, 0.9);
+}
+
 .package-title {
   font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
-
+.package-price {
+  font-size: 3.157em;
+}
 .package-price span {
   font-size: 22px;
   position: relative;
@@ -14,7 +35,7 @@
   font-size: 18px;
   font-weight: 500;
   margin-left: -5px;
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .package .card-body p {
@@ -22,19 +43,26 @@
 }
 
 .subscribe {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 0px;
   color: #3c2f2f;
   letter-spacing: 2px;
-  display: flex !important;
-  align-items: center;
+  line-height: 0;
+  border-color: transparent !important;
+  cursor: pointer;
 }
+
+.subscribe:hover {
+  border-color: transparent !important;
+  cursor: pointer;
+}
+
 
 #customer-reviews {
   padding: 100px 0;
-  background-image: url(../../static/img/reviewbg.jpg);
+  background-image: url(https://res.cloudinary.com/eagle-crane-co/image/upload/v1553137952/eagleandcrane/reviewbg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,7 +79,6 @@
   background-size: cover;
   outline: none;
 }
-
 
 .review-body {
   padding: 0 2rem;
@@ -70,45 +97,130 @@
 .blog-list-title a {
   color: #3c2f2f;
 }
+.blog-created li img{
+  margin-top: -2px;
+}
 
 #newsletter {
   padding: 150px 0;
-  background-image: url(../../static/img/newsletterbg.jpg);
+  background-image: url(https://res.cloudinary.com/eagle-crane-co/image/upload/v1553137128/eagleandcrane/newsletterbg.jpg);
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-.form-newsletter input {
-  border-radius: 0;
-  height: 60px;
-  box-shadow: none !important;
-  outline: none;
-  border: none;
+.meetbg {
+  position: relative;
+  height: 800px;
+  max-height: 100vw;
+  width:100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#meet .content {
+  padding: 90px 0;
 }
 
-.form-newsletter button {
+.what-we-do-bg {
+  position: relative;
+  height: 800px;
+  max-height: 100vw;
+  width:100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#what-we-do .content {
+  padding: 90px 0;
+}
+#newsletter .content {
+  padding: 8rem 3rem;
+}
+.form-newsletter input, .form-control {
   border-radius: 0;
-  height: 60px;
+  height: 50px;
+  outline: none;
+  border-color: #e9ecef;
+}
+.form-newsletter input:focus, .form-control:focus {
+  border-color: #e34b42;
+  box-shadow: 0 0 0 0.2rem rgba(227, 75, 66, 0.25);
+}
+
+.form-newsletter button, button[type="submit"] {
+  border-radius: 0;
+  height: 65px;
   text-transform: uppercase;
   font-weight: 700;
   color: #fff !important;
-  background-color: #eb4f47 !important;
+  background-color: #d43c33 !important;
   border-radius: 0px;
   letter-spacing: 2px;
-  width: 100%;
+  padding: 0rem 3rem;
   outline: none;
   border: none;
 }
 
-@media (min-width:768px) {
+
+.close {
+  color:#fff !important;
+  font-weight: 400;
+  font-size: 2rem;
+  outline: none;
+}
+.steps li {
+  font-size: 1.5rem;
+}
+
+.modal-package iframe {
+  min-height: 120vh;
+}
+
+@media (min-width: 768px) {
+  .modal-package iframe {
+    min-height: 55vh;
+  }
   .review-body {
     padding: 0 5rem;
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 992px) {
+  #meet .content {
+    padding: 190px 0 190px 50px;
+  }
+  #what-we-do .content {
+    padding: 190px 50px 190px 0px;
+  }
+  .meetbg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-position: center;
+  }
+  .what-we-do-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-position: center; 
+  }
+
+}
+
+@media (min-width: 1200px) {
   .package {
     padding: 5rem;
   }
+  #video {
+    padding: 200px 0;
+  }
+  .modal-xxl {
+    max-width: 1420px;
+  }
 }
+
+
