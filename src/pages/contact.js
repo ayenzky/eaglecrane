@@ -4,7 +4,7 @@ import { Form, Button, Col, Row } from 'react-bootstrap'
 import { LazyLoadImage, LazyLoadComponent } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import Layout from '../components/Layout'
-import WebriqForm from '../components/Form'
+import WebriQForm from '@webriq/gatsby-webriq-form'
 import SEO from '../components/seo'
 
 
@@ -28,9 +28,9 @@ class ContactPage extends React.Component {
 
           <Col md={6} className="pr-md-5">
           <h2 className="mb-5">We love to hear from you.</h2>
-          <WebriqForm
-            formName="Contact Form"
-            formId="5c94566938b7513aa29d9ddd"
+          <WebriQForm
+            name="Contact Form"
+            data-form-id="5c94566938b7513aa29d9ddd"
           >
           <Form.Row>
           <Form.Group className="mb-4" as={Col} md="12" controlId="validationCustom01">
@@ -78,7 +78,7 @@ class ContactPage extends React.Component {
           </Form.Group>
           </Form.Row>
           <Button type="submit">Send Message</Button>
-          </WebriqForm>
+          </WebriQForm>
           </Col>
           <Col md={6}>
             <div className="content">
