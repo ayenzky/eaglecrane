@@ -3,9 +3,27 @@ import { graphql } from 'gatsby'
 import { Container, Button, Col, Row } from 'react-bootstrap'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import WebriQForm from '@bit/webriq.components.webriq-form'
+import WebriQForm from '@webriq/gatsby-webriq-form'
+// import LoadScript from '../components/LoadScript'
 
 class PartnerPage extends React.Component {
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     scriptReady: false
+  //   };
+
+  // }
+
+  // componentWillMount() {
+  //   LoadScript(() => {
+  //     // Work to do after the library loads
+  //     this.setState({ scriptReady: true });
+      
+  //   });   
+  // }
+  
 
   render() {
     const { data } = this.props

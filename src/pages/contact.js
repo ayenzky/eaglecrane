@@ -4,7 +4,7 @@ import { Form, Button, Col, Row } from 'react-bootstrap'
 import { LazyLoadImage, LazyLoadComponent } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import Layout from '../components/Layout'
-import WebriQForm from '@bit/webriq.components.webriq-form'
+import WebriQForm from '@webriq/gatsby-webriq-form'
 import SEO from '../components/seo'
 
 
